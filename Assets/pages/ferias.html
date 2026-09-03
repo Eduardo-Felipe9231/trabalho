@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>SE Hub | Férias</title>
+
+
+    <!-- CSS PRINCIPAL -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+
+    <!-- CSS DO DASHBOARD -->
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css">
+
+
+    <!-- CSS DAS FÉRIAS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/ferias.css">
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- ============================================
+     SIDEBAR
+============================================= -->
+
+<aside class="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <div class="logo-icon">
+
+            <i class="fa-solid fa-industry"></i>
+
+        </div>
+
+
+        <div>
+
+            <h2>SE Hub</h2>
+
+            <span>CPW</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- MENU -->
+
+    <nav>
+
+        <ul>
+
+
+            <!-- DASHBOARD -->
+
+            <li>
+
+                <a href="../index.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+
+            <!-- FÉRIAS -->
+
+            <li class="active">
+
+                <a href="ferias.html">
+
+                    <i class="fa-solid fa-umbrella-beach"></i>
+
+                    Férias
+
+                </a>
+
+            </li>
+
+
+            <!-- PROJETOS -->
+
+            <li>
+
+                <a href="projetos.html">
+
+                    <i class="fa-solid fa-diagram-project"></i>
+
+                    Projetos
+
+                </a>
+
+            </li>
+
+
+            <!-- FUNCIONÁRIOS -->
+
+            <li>
+
+                <a href="funcionarios.html">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Funcionários
+
+                </a>
+
+            </li>
+
+
+            <!-- BIBLIOTECA -->
+
+            <li>
+
+                <a href="biblioteca.html">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    Biblioteca
+
+                </a>
+
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+</aside>
+
+
+
+<!-- ============================================
+     CONTEÚDO
+============================================= -->
+
+<main class="content">
+
+
+    <!-- ========================================
+         HEADER
+    ========================================= -->
+
+    <header>
+
+
+        <div class="header-left">
+
+            <h1>
+
+                Controle de Férias
+
+            </h1>
+
+            <p>
+
+                Acompanhe e organize as férias
+                da equipe do Setor SE.
+
+            </p>
+
+        </div>
+
+
+        <div class="header-right">
+
+
+            <!-- NOTIFICAÇÃO -->
+
+            <button class="notification">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span>3</span>
+
+            </button>
+
+
+            <!-- PERFIL -->
+
+            <div class="profile">
+
+                <div class="avatar green-avatar">
+
+                    E
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+
+                        Eduardo
+
+                    </strong>
+
+                    <small>
+
+                        Engenharia SE
+
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ========================================
+         CARDS DE RESUMO
+    ========================================= -->
+
+    <section class="vacation-summary">
+
+
+        <!-- PRÓXIMAS FÉRIAS -->
+
+        <div class="vacation-summary-card">
+
+
+            <div class="vacation-summary-icon blue-detail">
+
+                <i class="fa-solid fa-calendar-day"></i>
+
+            </div>
+
+
+            <div>
+
+                <span>
+
+                    Próximas férias
+
+                </span>
+
+
+                <strong id="nextVacation">
+
+                    Nenhuma programada
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PLANEJADAS -->
+
+        <div class="vacation-summary-card">
+
+
+            <div class="vacation-summary-icon purple-detail">
+
+                <i class="fa-solid fa-calendar-plus"></i>
+
+            </div>
+
+
+            <div>
+
+                <span>
+
+                    Férias planejadas
+
+                </span>
+
+
+                <strong id="plannedVacations">
+
+                    0
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROGRAMADAS -->
+
+        <div class="vacation-summary-card">
+
+
+            <div class="vacation-summary-icon green-detail">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+            </div>
+
+
+            <div>
+
+                <span>
+
+                    Férias programadas
+
+                </span>
+
+
+                <strong id="scheduledVacations">
+
+                    0
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ALERTAS -->
+
+        <div class="vacation-summary-card">
+
+
+            <div class="vacation-summary-icon orange-detail">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+            </div>
+
+
+            <div>
+
+                <span>
+
+                    Alertas
+
+                </span>
+
+
+                <strong id="vacationAlerts">
+
+                    0
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         AÇÕES
+    ========================================= -->
+
+    <section class="vacation-actions">
+
+
+        <button
+            class="vacation-action-button primary-vacation-action"
+            id="openPlannedVacationModal">
+
+
+            <i class="fa-solid fa-calendar-plus"></i>
+
+
+            Planejar férias
+
+
+        </button>
+
+
+
+        <button
+            class="vacation-action-button"
+            id="openScheduledVacationModal">
+
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+
+            Programar férias
+
+
+        </button>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         ALERTA DE CONFLITO
+    ========================================= -->
+
+    <div
+        id="vacationConflictAlert"
+        class="vacation-conflict-alert hidden">
+
+
+        <div class="conflict-icon">
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+
+                Conflito de férias detectado
+
+            </strong>
+
+
+            <p>
+
+                Já existe um colaborador com férias
+                programadas para este período.
+
+            </p>
+
+        </div>
+
+
+        <button id="closeConflictAlert">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- ========================================
+         NAVEGAÇÃO DAS ABAS
+    ========================================= -->
+
+    <div class="vacation-tabs">
+
+
+        <button
+            class="vacation-tab active"
+            data-tab="calendar">
+
+
+            <i class="fa-solid fa-calendar"></i>
+
+
+            Calendário
+
+
+        </button>
+
+
+
+        <button
+            class="vacation-tab"
+            data-tab="planned">
+
+
+            <i class="fa-solid fa-calendar-plus"></i>
+
+
+            Férias planejadas
+
+
+        </button>
+
+
+
+        <button
+            class="vacation-tab"
+            data-tab="scheduled">
+
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+
+            Férias programadas
+
+
+        </button>
+
+
+
+        <button
+            class="vacation-tab"
+            data-tab="alerts">
+
+
+            <i class="fa-solid fa-bell"></i>
+
+
+            Alertas
+
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- ========================================
+         ABA CALENDÁRIO
+    ========================================= -->
+
+    <section
+        class="vacation-tab-content active"
+        id="calendarTab">
+
+
+        <div class="vacation-calendar-card">
+
+
+            <div class="calendar-header">
+
+
+                <button
+                    id="previousMonth"
+                    class="calendar-nav-button">
+
+
+                    <i class="fa-solid fa-chevron-left"></i>
+
+
+                </button>
+
+
+                <div>
+
+
+                    <h2 id="calendarMonth">
+
+                        Janeiro 2026
+
+                    </h2>
+
+
+                    <span>
+
+                        Calendário de férias da equipe
+
+                    </span>
+
+
+                </div>
+
+
+                <button
+                    id="nextMonth"
+                    class="calendar-nav-button">
+
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+
+                </button>
+
+
+            </div>
+
+
+
+            <div class="calendar-weekdays">
+
+
+                <span>Dom</span>
+
+                <span>Seg</span>
+
+                <span>Ter</span>
+
+                <span>Qua</span>
+
+                <span>Qui</span>
+
+                <span>Sex</span>
+
+                <span>Sáb</span>
+
+
+            </div>
+
+
+
+            <div
+                class="calendar-grid"
+                id="vacationCalendar">
+
+
+                <!-- JAVASCRIPT VAI GERAR -->
+
+            </div>
+
+
+
+            <!-- LEGENDA -->
+
+            <div class="calendar-legend">
+
+
+                <div>
+
+                    <span class="legend-color ana-color"></span>
+
+                    Ana Beatriz
+
+                </div>
+
+
+                <div>
+
+                    <span class="legend-color fabiane-color"></span>
+
+                    Fabiane
+
+                </div>
+
+
+                <div>
+
+                    <span class="legend-color italo-color"></span>
+
+                    Ítalo
+
+                </div>
+
+
+                <div>
+
+                    <span class="legend-color eduardo-color"></span>
+
+                    Eduardo
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ========================================
+         ABA FÉRIAS PLANEJADAS
+    ========================================= -->
+
+    <section
+        class="vacation-tab-content"
+        id="plannedTab">
+
+
+        <div class="vacation-section-header">
+
+
+            <div>
+
+                <span class="section-label">
+
+                    PLANEJAMENTO
+
+                </span>
+
+
+                <h2>
+
+                    Férias planejadas
+
+                </h2>
+
+
+                <p>
+
+                    Períodos que os colaboradores
+                    pretendem tirar férias, mas que
+                    ainda não foram oficialmente programados.
+
+                </p>
+
+            </div>
+
+
+            <button
+                class="vacation-action-button primary-vacation-action"
+                id="plannedTabButton">
+
+
+                <i class="fa-solid fa-plus"></i>
+
+
+                Adicionar planejamento
+
+
+            </button>
+
+
+        </div>
+
+
+
+        <div
+            class="vacation-list"
+            id="plannedVacationList">
+
+
+            <!-- JAVASCRIPT VAI GERAR -->
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         ABA FÉRIAS PROGRAMADAS
+    ========================================= -->
+
+    <section
+        class="vacation-tab-content"
+        id="scheduledTab">
+
+
+        <div class="vacation-section-header">
+
+
+            <div>
+
+                <span class="section-label">
+
+                    PROGRAMAÇÃO
+
+                </span>
+
+
+                <h2>
+
+                    Férias programadas
+
+                </h2>
+
+
+                <p>
+
+                    Férias oficialmente programadas
+                    para os colaboradores da equipe.
+
+                </p>
+
+            </div>
+
+
+            <button
+                class="vacation-action-button primary-vacation-action"
+                id="scheduledTabButton">
+
+
+                <i class="fa-solid fa-plus"></i>
+
+
+                Programar férias
+
+
+            </button>
+
+
+        </div>
+
+
+
+        <div
+            class="vacation-list"
+            id="scheduledVacationList">
+
+
+            <!-- JAVASCRIPT VAI GERAR -->
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         ABA ALERTAS
+    ========================================= -->
+
+    <section
+        class="vacation-tab-content"
+        id="alertsTab">
+
+
+        <div class="vacation-section-header">
+
+
+            <div>
+
+                <span class="section-label">
+
+                    ATENÇÃO
+
+                </span>
+
+
+                <h2>
+
+                    Alertas de férias
+
+                </h2>
+
+
+                <p>
+
+                    Acompanhe períodos aquisitivos
+                    próximos do vencimento.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div
+            class="vacation-alert-list"
+            id="vacationAlertList">
+
+
+            <!-- JAVASCRIPT VAI GERAR -->
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================
+         MODAL — PLANEJAR FÉRIAS
+    ========================================= -->
+
+    <div
+        class="vacation-modal-overlay"
+        id="plannedVacationModal">
+
+
+        <div class="vacation-modal">
+
+
+            <div class="vacation-modal-header">
+
+
+                <div>
+
+                    <span class="section-label">
+
+                        PLANEJAMENTO
+
+                    </span>
+
+
+                    <h2>
+
+                        Planejar férias
+
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="close-vacation-modal"
+                    data-close="plannedVacationModal">
+
+
+                    <i class="fa-solid fa-xmark"></i>
+
+
+                </button>
+
+
+            </div>
+
+
+
+            <form id="plannedVacationForm">
+
+
+                <!-- FUNCIONÁRIO -->
+
+                <div class="form-group">
+
+
+                    <label>
+
+                        Funcionário
+
+                    </label>
+
+
+                    <select
+                        id="plannedEmployee"
+                        required>
+
+
+                        <option value="">
+
+                            Selecione o funcionário
+
+                        </option>
+
+
+                        <option value="Ana Beatriz">
+
+                            Ana Beatriz
+
+                        </option>
+
+
+                        <option value="Fabiane">
+
+                            Fabiane
+
+                        </option>
+
+
+                        <option value="Ítalo">
+
+                            Ítalo
+
+                        </option>
+
+
+                        <option value="Eduardo">
+
+                            Eduardo
+
+                        </option>
+
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- DATA PRETENDIDA -->
+
+                <div class="form-group">
+
+
+                    <label>
+
+                        Data pretendida para início
+
+                    </label>
+
+
+                    <input
+                        type="date"
+                        id="plannedStartDate"
+                        required>
+
+                </div>
+
+
+
+                <!-- DIAS -->
+
+                <div class="form-group">
+
+
+                    <label>
+
+                        Quantidade de dias
+
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="plannedDays"
+                        min="1"
+                        max="30"
+                        placeholder="Ex: 15"
+                        required>
+
+                </div>
+
+
+
+                <!-- OBSERVAÇÃO -->
+
+                <div class="form-group">
+
+
+                    <label>
+
+                        Observação
+
+                    </label>
+
+
+                    <textarea
+                        id="plannedObservation"
+                        placeholder="Ex: Planejamento para férias de fim de ano...">
+
+                    </textarea>
+
+                </div>
+
+
+
+                <div class="modal-actions">
+
+
+                    <button
+                        type="button"
+                        class="cancel-button"
+                        data-close="plannedVacationModal">
+
+
+                        Cancelar
+
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="save-button">
+
+
+                        <i class="fa-solid fa-check"></i>
+
+
+                        Salvar planejamento
+
+
+                    </button>
+
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================================
+         MODAL — PROGRAMAR FÉRIAS
+    ========================================= -->
+
+    <div
+        class="vacation-modal-overlay"
+        id="scheduledVacationModal">
+
+
+        <div class="vacation-modal">
+
+
+            <div class="vacation-modal-header">
+
+
+                <div>
+
+                    <span class="section-label">
+
+                        PROGRAMAÇÃO
+
+                    </span>
+
+
+                    <h2>
+
+                        Programar férias
+
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="close-vacation-modal"
+                    data-close="scheduledVacationModal">
+
+
+                    <i class="fa-solid fa-xmark"></i>
+
+
+                </button>
+
+            </div>
+
+
+
+            <form id="scheduledVacationForm">
+
+
+                <!-- FUNCIONÁRIO -->
+
+                <div class="form-group">
+
+
+                    <label>
+
+                        Funcionário
+
+                    </label>
+
+
+                    <select
+                        id="scheduledEmployee"
+                        required>
+
+
+                        <option value="">
+
+                            Selecione o funcionário
+
+                        </option>
+
+
+                        <option value="Ana Beatriz">
+
+                            Ana Beatriz
+
+                        </option>
+
+
+                        <option value="Fabiane">
+
+                            Fabiane
+
+                        </option>
+
+
+                        <option value="Ítalo">
+
+                            Ítalo
+
+                        </option>
+
+
+                        <option value="Eduardo">
+
+                            Eduardo
+
+                        </option>
+
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- DATA INICIAL -->
+
+                <div class="form-group">
+
+
+                    <label>
+
+                        Primeiro dia de férias
+
+                    </label>
+
+
+                    <input
+                        type="date"
+                        id="scheduledStartDate"
+                        required>
+
+                </div>
+
+
+
+                <!-- QUANTIDADE -->
+
+                <div class="form-group">
+
+
+                    <label>
+
+                        Quantidade de dias
+
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="scheduledDays"
+                        min="1"
+                        max="30"
+                        placeholder="Ex: 15"
+                        required>
+
+                </div>
+
+
+
+                <!-- DATA DE RETORNO -->
+
+                <div class="calculated-return">
+
+
+                    <div class="return-icon">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+
+                            Data prevista de retorno
+
+                        </span>
+
+
+                        <strong id="calculatedReturn">
+
+                            Informe a data e a quantidade de dias
+
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- OBSERVAÇÃO -->
+
+                <div class="form-group">
+
+
+                    <label>
+
+                        Observação
+
+                    </label>
+
+
+                    <textarea
+                        id="scheduledObservation"
+                        placeholder="Observações sobre as férias...">
+
+                    </textarea>
+
+                </div>
+
+
+
+                <!-- AVISO DE CONFLITO -->
+
+                <div
+                    id="modalConflictWarning"
+                    class="modal-conflict-warning hidden">
+
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+
+                    <span>
+
+                        Atenção! Já existe férias
+                        programadas neste período.
+
+                    </span>
+
+
+                </div>
+
+
+
+                <div class="modal-actions">
+
+
+                    <button
+                        type="button"
+                        class="cancel-button"
+                        data-close="scheduledVacationModal">
+
+
+                        Cancelar
+
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="save-button">
+
+
+                        <i class="fa-solid fa-check"></i>
+
+
+                        Programar férias
+
+
+                    </button>
+
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+
+        <div class="footer-left">
+
+            <strong>
+
+                SE Hub
+
+            </strong>
+
+
+            <span>
+
+                Sistema Interno de Gestão do Setor SE
+
+            </span>
+
+        </div>
+
+
+        <div class="footer-right">
+
+            Desenvolvido por Eduardo Felipe
+
+        </div>
+
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- ============================================
+     JAVASCRIPT
+============================================= -->
+
+<script src="../js/app.js"></script>
+
+<script src="../js/ferias.js"></script>
+
+
+</body>
+
+</html>

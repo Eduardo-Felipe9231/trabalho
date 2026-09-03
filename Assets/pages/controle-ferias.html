@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Controle de Férias | SE HUB
+    </title>
+
+
+    <!-- CSS PRINCIPAL -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+
+    <!-- CSS DA PÁGINA -->
+
+    <link
+        rel="stylesheet"
+        href="../css/controle-ferias.css"
+    >
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            <div class="logo-icon">
+
+                SE
+
+            </div>
+
+            <div>
+
+                <strong>
+                    SE HUB
+                </strong>
+
+                <span>
+                    Gestão do Setor
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+
+            <a
+                href="../index.html"
+                class="menu-item"
+            >
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="ferias.html"
+                class="menu-item active"
+            >
+
+                <i class="fa-solid fa-umbrella-beach"></i>
+
+                <span>
+                    Férias
+                </span>
+
+            </a>
+
+
+            <a
+                href="funcionarios.html"
+                class="menu-item"
+            >
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>
+                    Funcionários
+                </span>
+
+            </a>
+
+
+            <a
+                href="projetos.html"
+                class="menu-item"
+            >
+
+                <i class="fa-solid fa-diagram-project"></i>
+
+                <span>
+                    Projetos
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <span>
+                Setor
+            </span>
+
+            <strong>
+                SE
+            </strong>
+
+        </div>
+
+
+    </aside>
+
+
+    <!-- =================================================
+         CONTEÚDO
+    ================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- HEADER -->
+
+        <header class="page-header">
+
+
+            <div>
+
+                <span class="section-label">
+
+                    GESTÃO DE PESSOAS
+
+                </span>
+
+
+                <h1>
+
+                    Controle de Férias
+
+                </h1>
+
+
+                <p>
+
+                    Acompanhe os períodos aquisitivos,
+                    vencimentos e prazos de férias da equipe.
+
+                </p>
+
+            </div>
+
+
+            <div class="header-date">
+
+                <i class="fa-regular fa-calendar"></i>
+
+                <span id="currentDate">
+
+                    --/--/----
+
+                </span>
+
+            </div>
+
+
+        </header>
+
+
+        <!-- =================================================
+             RESUMO
+        ================================================== -->
+
+        <section class="deadline-summary">
+
+
+            <div class="deadline-card">
+
+                <div class="deadline-icon regular">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Situação regular
+                    </span>
+
+                    <strong id="regularCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="deadline-card">
+
+                <div class="deadline-icon warning">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Vencem em até 60 dias
+                    </span>
+
+                    <strong id="warningCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="deadline-card">
+
+                <div class="deadline-icon danger">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Vencimento próximo
+                    </span>
+
+                    <strong id="dangerCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="deadline-card">
+
+                <div class="deadline-icon expired">
+
+                    <i class="fa-solid fa-circle-xmark"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Prazo vencido
+                    </span>
+
+                    <strong id="expiredCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =================================================
+             ALERTA PRINCIPAL
+        ================================================== -->
+
+        <section
+            id="criticalDeadlineAlert"
+            class="critical-deadline-alert hidden"
+        >
+
+            <div class="critical-alert-icon">
+
+                <i class="fa-solid fa-bell"></i>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Atenção necessária
+                </strong>
+
+                <p id="criticalAlertText">
+
+                    Existem férias que precisam
+                    de atenção.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LISTA DE FUNCIONÁRIOS
+        ================================================== -->
+
+        <section class="deadline-section">
+
+
+            <div class="deadline-section-header">
+
+
+                <div>
+
+                    <span class="section-label">
+
+                        ACOMPANHAMENTO
+
+                    </span>
+
+
+                    <h2>
+
+                        Períodos aquisitivos
+
+                    </h2>
+
+
+                    <p>
+
+                        Consulte a situação de férias
+                        de cada integrante do setor SE.
+
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="refreshDeadlines"
+                    class="refresh-button"
+                >
+
+                    <i class="fa-solid fa-rotate"></i>
+
+                    Atualizar
+
+                </button>
+
+
+            </div>
+
+
+            <!-- FILTROS -->
+
+            <div class="deadline-filters">
+
+
+                <div class="filter-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="searchEmployee"
+                        placeholder="Buscar funcionário..."
+                    >
+
+                </div>
+
+
+                <select id="statusFilter">
+
+                    <option value="all">
+
+                        Todos os status
+
+                    </option>
+
+                    <option value="regular">
+
+                        Regular
+
+                    </option>
+
+                    <option value="warning">
+
+                        Vencimento em até 60 dias
+
+                    </option>
+
+                    <option value="danger">
+
+                        Vencimento próximo
+
+                    </option>
+
+                    <option value="expired">
+
+                        Vencido
+
+                    </option>
+
+                </select>
+
+
+            </div>
+
+
+            <!-- LISTA -->
+
+            <div
+                id="deadlineEmployeeList"
+                class="deadline-employee-list"
+            >
+
+                <!-- JavaScript preencherá -->
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script
+        src="../js/controle-ferias.js"
+    ></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1111 @@
+/* ============================================
+   RESET
+============================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --primary:#214f86;
+    --primary-light:#2d6eb8;
+    --secondary:#4cc9f0;
+
+    --green:#2ecc71;
+    --red:#e74c3c;
+    --yellow:#f39c12;
+    --blue:#3498db;
+    --pink:#e91e63;
+
+    --background:#eef3f8;
+
+    --card:#ffffff;
+
+    --text:#233142;
+
+    --shadow:0 15px 35px rgba(0,0,0,.08);
+
+    --radius:18px;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+}
+
+
+/* ============================================
+SIDEBAR
+============================================ */
+
+.sidebar{
+
+    width:270px;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    height:100vh;
+
+    background:linear-gradient(
+        180deg,
+        #0815d1,
+        #2e455f
+    );
+
+    color:white;
+
+    padding:30px;
+
+    overflow:auto;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:45px;
+
+}
+
+.logo-icon{
+
+    width:60px;
+
+    height:60px;
+
+    background:var(--secondary);
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:26px;
+
+}
+
+.logo h2{
+
+    font-size:24px;
+
+}
+
+.logo span{
+
+    opacity:.8;
+
+    font-size:14px;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar li{
+
+    margin-bottom:10px;
+
+}
+
+.sidebar a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    transition:.3s;
+
+}
+
+.sidebar a:hover{
+
+    background:rgba(255,255,255,.12);
+
+    transform:translateX(8px);
+
+}
+
+.sidebar .active a{
+
+    background:white;
+
+    color:#214f86;
+
+}
+
+
+/* ============================================
+CONTENT
+============================================ */
+
+.content{
+
+    margin-left:270px;
+
+    padding:35px;
+
+}
+
+
+/* ============================================
+HEADER
+============================================ */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.header-left h1{
+
+    font-size:32px;
+
+    margin-bottom:6px;
+
+}
+
+.header-left p{
+
+    color:#7f8c8d;
+
+}
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.search{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:white;
+
+    padding:12px 18px;
+
+    border-radius:14px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.search input{
+
+    border:none;
+
+    outline:none;
+
+    width:220px;
+
+    font-size:15px;
+
+    background:none;
+
+}
+
+.notification{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:white;
+
+    cursor:pointer;
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+    font-size:18px;
+
+}
+
+.notification span{
+
+    position:absolute;
+
+    top:-5px;
+
+    right:-5px;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    background:red;
+
+    color:white;
+
+    font-size:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.profile{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:12px 18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.avatar{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:var(--green);
+
+    color:white;
+
+    font-weight:bold;
+
+}
+
+/* ============================================
+   CARDS
+============================================ */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    transition:.3s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:6px;
+
+}
+
+.card.blue::before{
+
+    background:var(--blue);
+
+}
+
+.card.green::before{
+
+    background:var(--green);
+
+}
+
+.card.yellow::before{
+
+    background:var(--yellow);
+
+}
+
+.card.red::before{
+
+    background:var(--red);
+
+}
+
+.card span{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+.card h2{
+
+    margin-top:10px;
+
+    font-size:38px;
+
+}
+
+.card i{
+
+    font-size:42px;
+
+    opacity:.85;
+
+}
+
+
+/* ============================================
+GRID
+============================================ */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:25px;
+
+    margin-bottom:25px;
+
+}
+
+.large{
+
+    min-height:300px;
+
+}
+
+.box{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:25px;
+
+}
+
+.box-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.box-title h3{
+
+    font-size:20px;
+
+}
+
+.box-title button{
+
+    border:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.box-title button:hover{
+
+    background:var(--primary-light);
+
+}
+
+
+/* ============================================
+PROJETOS
+============================================ */
+
+.project{
+
+    margin-bottom:28px;
+
+}
+
+.project:last-child{
+
+    margin-bottom:0;
+
+}
+
+.project-info{
+
+    margin-bottom:10px;
+
+}
+
+.project-info h4{
+
+    margin-bottom:5px;
+
+}
+
+.project-info p{
+
+    color:#666;
+
+    font-size:14px;
+
+}
+
+.progress{
+
+    width:100%;
+
+    height:10px;
+
+    background:#ececec;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin:12px 0;
+
+}
+
+.progress-bar{
+
+    height:100%;
+
+    width:0;
+
+    background:var(--yellow);
+
+    border-radius:20px;
+
+}
+
+.blue-bar{
+
+    background:var(--blue);
+
+}
+
+.green-bar{
+
+    background:var(--green);
+
+}
+
+
+/* ============================================
+ALERTAS
+============================================ */
+
+.alert{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    margin-bottom:18px;
+
+    font-weight:500;
+
+}
+
+.alert:last-child{
+
+    margin-bottom:0;
+
+}
+
+.alert i{
+
+    font-size:22px;
+
+}
+
+.alert.red{
+
+    background:#fdeaea;
+
+    color:#c0392b;
+
+}
+
+.alert.yellow{
+
+    background:#fff8e6;
+
+    color:#d68910;
+
+}
+
+.alert.blue{
+
+    background:#eaf4ff;
+
+    color:#2471a3;
+
+}
+
+
+/* ============================================
+TABELA
+============================================ */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:#f4f6f9;
+
+}
+
+th{
+
+    padding:16px;
+
+    text-align:left;
+
+    font-size:14px;
+
+}
+
+td{
+
+    padding:16px;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+tbody tr:hover{
+
+    background:#f9fbfd;
+
+}
+
+.employee{
+
+    display:inline-block;
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    margin-right:8px;
+
+}
+
+.employee.green{
+
+    background:var(--green);
+
+}
+
+.employee.blue{
+
+    background:var(--blue);
+
+}
+
+.employee.red{
+
+    background:var(--red);
+
+}
+
+.employee.pink{
+
+    background:var(--pink);
+
+}
+
+/* ============================================
+   EQUIPE
+============================================ */
+
+.team{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.member{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.member:hover{
+
+    background:#f5f8fb;
+
+}
+
+.member strong{
+
+    display:block;
+
+}
+
+.member small{
+
+    color:#777;
+
+}
+
+.green-avatar{
+
+    background:var(--green);
+
+}
+
+.blue-avatar{
+
+    background:var(--blue);
+
+}
+
+.red-avatar{
+
+    background:var(--red);
+
+}
+
+.pink-avatar{
+
+    background:var(--pink);
+
+}
+
+
+/* ============================================
+CALENDÁRIO
+============================================ */
+
+.calendar{
+
+    display:grid;
+
+    grid-template-columns:repeat(7,1fr);
+
+    gap:12px;
+
+}
+
+.day-name{
+
+    text-align:center;
+
+    font-weight:600;
+
+    color:#7b8794;
+
+    padding-bottom:10px;
+
+}
+
+.day{
+
+    background:#f7f9fc;
+
+    border-radius:12px;
+
+    min-height:90px;
+
+    padding:10px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+    cursor:pointer;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.day:hover{
+
+    background:#e9f3ff;
+
+    transform:translateY(-4px);
+
+}
+
+.day small{
+
+    margin-top:8px;
+
+    font-size:11px;
+
+    font-weight:500;
+
+    color:white;
+
+    padding:4px 8px;
+
+    border-radius:20px;
+
+    width:max-content;
+
+}
+
+.empty{
+
+    visibility:hidden;
+
+}
+
+.vacation-green{
+
+    background:#2ecc71;
+
+    color:white;
+
+}
+
+.vacation-green small{
+
+    background:rgba(255,255,255,.2);
+
+}
+
+.vacation-blue{
+
+    background:#3498db;
+
+    color:white;
+
+}
+
+.vacation-blue small{
+
+    background:rgba(255,255,255,.2);
+
+}
+
+.vacation-red{
+
+    background:#e74c3c;
+
+    color:white;
+
+}
+
+.vacation-red small{
+
+    background:rgba(255,255,255,.2);
+
+}
+
+.vacation-pink{
+
+    background:#e91e63;
+
+    color:white;
+
+}
+
+.vacation-pink small{
+
+    background:rgba(255,255,255,.2);
+
+}
+
+
+/* ============================================
+ATIVIDADES
+============================================ */
+
+.activity{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:22px;
+
+}
+
+.activity:last-child{
+
+    margin-bottom:0;
+
+}
+
+.activity i{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:18px;
+
+}
+
+.activity strong{
+
+    display:block;
+
+    margin-bottom:4px;
+
+}
+
+.activity small{
+
+    color:#777;
+
+}
+
+
+/* ============================================
+FOOTER
+============================================ */
+
+footer{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:#7b8794;
+
+    font-size:14px;
+
+    padding:20px 0;
+
+    border-top:1px solid #dfe7ef;
+
+}
+
+
+/* ============================================
+SCROLLBAR
+============================================ */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#edf2f7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#b7c3d0;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#94a3b8;
+
+}
+
+
+/* ============================================
+ANIMAÇÕES
+============================================ */
+
+.card,
+.box,
+.member,
+.activity,
+.day{
+
+    animation:fadeUp .5s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

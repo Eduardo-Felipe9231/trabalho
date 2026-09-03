@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>SE Hub | Biblioteca</title>
+
+
+<!-- ============================================
+     CSS PRINCIPAL
+============================================= -->
+
+<link
+    rel="stylesheet"
+    href="../css/style.css">
+
+
+<!-- ============================================
+     CSS DO DASHBOARD
+============================================= -->
+
+<link
+    rel="stylesheet"
+    href="../css/dashboard.css">
+
+
+<!-- ============================================
+     CSS RESPONSIVO
+============================================= -->
+
+<link
+    rel="stylesheet"
+    href="../css/responsive.css">
+
+
+<!-- ============================================
+     CSS ESPECÍFICO DA BIBLIOTECA
+============================================= -->
+
+<link
+    rel="stylesheet"
+    href="../css/biblioteca.css">
+
+
+<!-- ============================================
+     GOOGLE FONTS
+============================================= -->
+
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+
+<!-- ============================================
+     FONT AWESOME
+============================================= -->
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+</head>
+
+<body>
+
+<!-- ============================================
+     SIDEBAR
+============================================= -->
+
+<aside class="sidebar">
+
+
+<!-- ========================================
+     LOGO
+========================================= -->
+
+<div class="logo">
+
+    <div class="logo-icon">
+
+        <i class="fa-solid fa-industry"></i>
+
+    </div>
+
+
+    <div>
+
+        <h2>SE Hub</h2>
+
+        <span>CPW</span>
+
+    </div>
+
+</div>
+
+
+<!-- ========================================
+     MENU
+========================================= -->
+
+<nav>
+
+    <ul>
+
+
+        <!-- DASHBOARD -->
+
+        <li>
+
+            <a href="../index.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </a>
+
+        </li>
+
+
+        <!-- FÉRIAS -->
+
+        <li>
+
+            <a href="ferias.html">
+
+                <i class="fa-solid fa-umbrella-beach"></i>
+
+                Férias
+
+            </a>
+
+        </li>
+
+
+        <!-- PROJETOS -->
+
+        <li>
+
+            <a href="projetos.html">
+
+                <i class="fa-solid fa-diagram-project"></i>
+
+                Projetos
+
+            </a>
+
+        </li>
+
+
+        <!-- FUNCIONÁRIOS -->
+
+        <li>
+
+            <a href="funcionarios.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                Funcionários
+
+            </a>
+
+        </li>
+
+
+        <!-- BIBLIOTECA -->
+
+        <li class="active">
+
+            <a href="biblioteca.html">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                Biblioteca
+
+            </a>
+
+        </li>
+
+
+    </ul>
+
+</nav>
+
+
+</aside>
+
+<!-- ============================================
+     CONTEÚDO PRINCIPAL
+============================================= -->
+
+<main class="content">
+
+
+<!-- ========================================
+     HEADER
+========================================= -->
+
+<header>
+
+
+    <div class="header-left">
+
+        <h1>
+
+            <i class="fa-solid fa-folder-open"></i>
+
+            Biblioteca
+
+        </h1>
+
+        <p>
+
+            Centralize e acesse documentos,
+            arquivos e materiais importantes
+            do Setor SE.
+
+        </p>
+
+    </div>
+
+
+    <div class="header-right">
+
+
+        <!-- NOTIFICAÇÕES -->
+
+        <button
+            class="notification"
+            type="button">
+
+            <i class="fa-solid fa-bell"></i>
+
+            <span>
+
+                3
+
+            </span>
+
+        </button>
+
+
+        <!-- PERFIL -->
+
+        <div class="profile">
+
+            <div class="avatar green-avatar">
+
+                E
+
+            </div>
+
+
+            <div>
+
+                <strong>
+
+                    Eduardo
+
+                </strong>
+
+                <small>
+
+                    Engenharia SE
+
+                </small>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</header>
+
+
+<!-- ========================================
+     BARRA PRINCIPAL
+========================================= -->
+
+<section class="library-toolbar">
+
+
+    <!-- ====================================
+         PESQUISA
+    ===================================== -->
+
+    <div class="library-search">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+            type="text"
+            id="librarySearch"
+            placeholder="Pesquisar documentos..."
+            autocomplete="off">
+
+    </div>
+
+
+    <!-- ====================================
+         AÇÕES
+    ===================================== -->
+
+    <div class="library-actions">
+
+
+        <!-- FILTROS -->
+
+        <button
+            class="library-action-button secondary"
+            id="filterButton"
+            type="button">
+
+            <i class="fa-solid fa-filter"></i>
+
+            Filtros
+
+        </button>
+
+
+        <!-- ADICIONAR DOCUMENTO -->
+
+        <button
+            class="library-action-button primary"
+            id="uploadDocumentButton"
+            type="button">
+
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+            Adicionar documento
+
+        </button>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- ========================================
+     INDICADORES
+========================================= -->
+
+<section class="library-stats">
+
+
+    <!-- ====================================
+         TOTAL
+    ===================================== -->
+
+    <div class="library-stat-card">
+
+        <div class="library-stat-icon blue-stat">
+
+            <i class="fa-solid fa-folder-open"></i>
+
+        </div>
+
+
+        <div>
+
+            <span>
+
+                Total de documentos
+
+            </span>
+
+            <h2 id="totalDocuments">
+
+                0
+
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <!-- ====================================
+         PDF
+    ===================================== -->
+
+    <div class="library-stat-card">
+
+        <div class="library-stat-icon red-stat">
+
+            <i class="fa-solid fa-file-pdf"></i>
+
+        </div>
+
+
+        <div>
+
+            <span>
+
+                Documentos PDF
+
+            </span>
+
+            <h2 id="pdfDocuments">
+
+                0
+
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <!-- ====================================
+         PLANILHAS
+    ===================================== -->
+
+    <div class="library-stat-card">
+
+        <div class="library-stat-icon green-stat">
+
+            <i class="fa-solid fa-file-excel"></i>
+
+        </div>
+
+
+        <div>
+
+            <span>
+
+                Planilhas
+
+            </span>
+
+            <h2 id="excelDocuments">
+
+                0
+
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <!-- ====================================
+         RECENTES
+    ===================================== -->
+
+    <div class="library-stat-card">
+
+        <div class="library-stat-icon purple-stat">
+
+            <i class="fa-solid fa-clock"></i>
+
+        </div>
+
+
+        <div>
+
+            <span>
+
+                Atualizados recentemente
+
+            </span>
+
+            <h2 id="recentDocuments">
+
+                0
+
+            </h2>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<!-- ========================================
+     CONTEÚDO DA BIBLIOTECA
+========================================= -->
+
+<section class="library-layout">
+
+
+    <!-- ====================================
+         SIDEBAR DE CATEGORIAS
+    ===================================== -->
+
+    <aside class="library-categories">
+
+
+        <!-- TÍTULO -->
+
+        <div class="library-section-title">
+
+            <span>
+
+                NAVEGAÇÃO
+
+            </span>
+
+            <h3>
+
+                Categorias
+
+            </h3>
+
+        </div>
+
+
+        <!-- ====================================
+             LISTA DE CATEGORIAS
+        ===================================== -->
+
+        <div class="category-list">
+
+
+            <!-- TODOS -->
+
+            <button
+                class="category-button active"
+                data-category="todos"
+                type="button">
+
+                <i class="fa-solid fa-border-all"></i>
+
+                <span>
+
+                    Todos os documentos
+
+                </span>
+
+                <strong id="count-todos">
+
+                    0
+
+                </strong>
+
+            </button>
+
+
+            <!-- PROJETOS -->
+
+            <button
+                class="category-button"
+                data-category="projetos"
+                type="button">
+
+                <i class="fa-solid fa-diagram-project"></i>
+
+                <span>
+
+                    Projetos
+
+                </span>
+
+                <strong id="count-projetos">
+
+                    0
+
+                </strong>
+
+            </button>
+
+
+            <!-- PROCEDIMENTOS -->
+
+            <button
+                class="category-button"
+                data-category="procedimentos"
+                type="button">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                <span>
+
+                    Procedimentos
+
+                </span>
+
+                <strong id="count-procedimentos">
+
+                    0
+
+                </strong>
+
+            </button>
+
+
+            <!-- MANUAIS -->
+
+            <button
+                class="category-button"
+                data-category="manuais"
+                type="button">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <span>
+
+                    Manuais
+
+                </span>
+
+                <strong id="count-manuais">
+
+                    0
+
+                </strong>
+
+            </button>
+
+
+            <!-- TREINAMENTOS -->
+
+            <button
+                class="category-button"
+                data-category="treinamentos"
+                type="button">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <span>
+
+                    Treinamentos
+
+                </span>
+
+                <strong id="count-treinamentos">
+
+                    0
+
+                </strong>
+
+            </button>
+
+
+            <!-- OUTROS -->
+
+            <button
+                class="category-button"
+                data-category="outros"
+                type="button">
+
+                <i class="fa-solid fa-folder"></i>
+
+                <span>
+
+                    Outros
+
+                </span>
+
+                <strong id="count-outros">
+
+                    0
+
+                </strong>
+
+            </button>
+
+
+        </div>
+
+
+        <!-- ====================================
+             FAVORITOS
+        ===================================== -->
+
+        <div class="favorites-box">
+
+            <div>
+
+                <i class="fa-solid fa-star"></i>
+
+                <span>
+
+                    Favoritos
+
+                </span>
+
+            </div>
+
+
+            <button
+                id="showFavorites"
+                type="button">
+
+                Ver favoritos
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+
+    </aside>
+
+
+    <!-- ====================================
+         CONTEÚDO DOS DOCUMENTOS
+    ===================================== -->
+
+    <div class="library-content">
+
+
+        <!-- ====================================
+             CABEÇALHO
+        ===================================== -->
+
+        <div class="library-content-header">
+
+
+            <div>
+
+                <span class="section-label">
+
+                    DOCUMENTOS
+
+                </span>
+
+                <h2 id="libraryTitle">
+
+                    Arquivos do Setor SE
+
+                </h2>
+
+            </div>
+
+
+            <!-- ====================================
+                 MODO DE VISUALIZAÇÃO
+            ===================================== -->
+
+            <div class="library-view-actions">
+
+
+                <!-- GRID -->
+
+                <button
+                    class="view-button active"
+                    data-view="grid"
+                    type="button"
+                    title="Visualização em grade">
+
+                    <i class="fa-solid fa-grip"></i>
+
+                </button>
+
+
+                <!-- LISTA -->
+
+                <button
+                    class="view-button"
+                    data-view="list"
+                    type="button"
+                    title="Visualização em lista">
+
+                    <i class="fa-solid fa-list"></i>
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ====================================
+             ESTADO DE CARREGAMENTO
+        ===================================== -->
+
+        <div
+            class="library-loading"
+            id="libraryLoading">
+
+            <i class="fa-solid fa-spinner fa-spin"></i>
+
+            <span>
+
+                Carregando documentos...
+
+            </span>
+
+        </div>
+
+
+        <!-- ====================================
+             GRID DE DOCUMENTOS
+
+             Os documentos serão criados
+             dinamicamente pelo biblioteca.js
+        ===================================== -->
+
+        <div
+            class="documents-grid"
+            id="documentsGrid">
+
+        </div>
+
+
+        <!-- ====================================
+             SEM RESULTADOS
+        ===================================== -->
+
+        <div
+            class="empty-library"
+            id="emptyLibrary">
+
+
+            <div class="empty-library-icon">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+            </div>
+
+
+            <h3>
+
+                Nenhum documento encontrado
+
+            </h3>
+
+
+            <p>
+
+                Tente alterar sua pesquisa
+                ou selecionar outra categoria.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- ====================================
+             ERRO AO CARREGAR
+        ===================================== -->
+
+        <div
+            class="library-error"
+            id="libraryError">
+
+
+            <div class="empty-library-icon">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+            </div>
+
+
+            <h3>
+
+                Não foi possível carregar os documentos
+
+            </h3>
+
+
+            <p>
+
+                Verifique se o servidor está funcionando
+                e tente novamente.
+
+            </p>
+
+
+            <button
+                id="retryLibraryButton"
+                class="library-action-button primary"
+                type="button">
+
+                <i class="fa-solid fa-rotate-right"></i>
+
+                Tentar novamente
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- ========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+
+    <div class="footer-left">
+
+        <strong>
+
+            SE Hub
+
+        </strong>
+
+        <span>
+
+            Sistema Interno de Gestão do Setor SE
+
+        </span>
+
+    </div>
+
+
+    <div class="footer-right">
+
+        Desenvolvido por Eduardo Felipe
+
+    </div>
+
+
+</footer>
+
+
+</main>
+
+<!-- ============================================
+     MODAL - ADICIONAR DOCUMENTO
+============================================= -->
+
+<div
+    class="modal"
+    id="uploadDocumentModal">
+
+
+<div class="modal-overlay"></div>
+
+
+<div
+    class="modal-content upload-modal">
+
+
+    <!-- CABEÇALHO -->
+
+    <div class="modal-header">
+
+        <div>
+
+            <span class="section-label">
+
+                BIBLIOTECA
+
+            </span>
+
+            <h2>
+
+                Adicionar documento
+
+            </h2>
+
+        </div>
+
+
+        <button
+            class="modal-close"
+            id="closeUploadModal"
+            type="button">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+    </div>
+
+
+    <!-- FORMULÁRIO -->
+
+    <form
+        id="uploadDocumentForm"
+        enctype="multipart/form-data">
+
+
+        <!-- ARQUIVO -->
+
+        <div class="form-group">
+
+            <label for="documentFile">
+
+                Arquivo
+
+            </label>
+
+
+            <input
+                type="file"
+                id="documentFile"
+                name="file"
+                required>
+
+        </div>
+
+
+        <!-- NOME -->
+
+        <div class="form-group">
+
+            <label for="documentName">
+
+                Nome do documento
+
+            </label>
+
+
+            <input
+                type="text"
+                id="documentName"
+                name="name"
+                placeholder="Digite o nome do documento"
+                required>
+
+        </div>
+
+
+        <!-- DESCRIÇÃO -->
+
+        <div class="form-group">
+
+            <label for="documentDescription">
+
+                Descrição
+
+            </label>
+
+
+            <textarea
+                id="documentDescription"
+                name="description"
+                placeholder="Descreva brevemente o documento..."
+                rows="4"></textarea>
+
+        </div>
+
+
+        <!-- CATEGORIA -->
+
+        <div class="form-group">
+
+            <label for="documentCategory">
+
+                Categoria
+
+            </label>
+
+
+            <select
+                id="documentCategory"
+                name="category"
+                required>
+
+                <option value="">
+
+                    Selecione uma categoria
+
+                </option>
+
+                <option value="projetos">
+
+                    Projetos
+
+                </option>
+
+                <option value="procedimentos">
+
+                    Procedimentos
+
+                </option>
+
+                <option value="manuais">
+
+                    Manuais
+
+                </option>
+
+                <option value="treinamentos">
+
+                    Treinamentos
+
+                </option>
+
+                <option value="outros">
+
+                    Outros
+
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- AÇÕES -->
+
+        <div class="modal-actions">
+
+
+            <button
+                class="library-action-button secondary"
+                id="cancelUploadButton"
+                type="button">
+
+                Cancelar
+
+            </button>
+
+
+            <button
+                class="library-action-button primary"
+                id="submitUploadButton"
+                type="submit">
+
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                Adicionar documento
+
+            </button>
+
+
+        </div>
+
+
+    </form>
+
+
+</div>
+
+
+</div>
+
+<!-- ============================================
+     JAVASCRIPT
+============================================= -->
+
+<script src="../js/app.js"></script>
+
+<script src="../js/biblioteca.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+/* ====================================
+   DASHBOARD
+==================================== */
+
+.box {
+    transition: all .3s ease;
+}
+
+.box:hover {
+    transform: translateY(-4px);
+}
+
+.card {
+    cursor: pointer;
+}
+
+.project-card {
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+}
+
+.status {
+    font-weight: 600;
+}
+
+footer {
+    padding: 20px;
+}

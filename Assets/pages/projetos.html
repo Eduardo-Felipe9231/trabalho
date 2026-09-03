@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>SE Hub | Projetos</title>
+
+
+    <!-- CSS PRINCIPAL -->
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+
+    <!-- CSS DO DASHBOARD -->
+
+    <link
+        rel="stylesheet"
+        href="../css/dashboard.css">
+
+
+    <!-- CSS RESPONSIVO -->
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css">
+
+
+    <!-- CSS ESPECÍFICO DOS PROJETOS -->
+
+    <link
+        rel="stylesheet"
+        href="../css/projetos.css">
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- FONT AWESOME -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ============================================
+     SIDEBAR
+============================================ -->
+
+<aside class="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <div class="logo-icon">
+
+            <i class="fa-solid fa-industry"></i>
+
+        </div>
+
+        <div>
+
+            <h2>SE Hub</h2>
+
+            <span>CPW</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- MENU -->
+
+    <nav>
+
+        <ul>
+
+
+            <!-- DASHBOARD -->
+
+            <li>
+
+                <a href="../index.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+
+            <!-- FÉRIAS -->
+
+            <li>
+
+                <a href="ferias.html">
+
+                    <i class="fa-solid fa-umbrella-beach"></i>
+
+                    Férias
+
+                </a>
+
+            </li>
+
+
+            <!-- PROJETOS -->
+
+            <li class="active">
+
+                <a href="projetos.html">
+
+                    <i class="fa-solid fa-diagram-project"></i>
+
+                    Projetos
+
+                </a>
+
+            </li>
+
+
+            <!-- FUNCIONÁRIOS -->
+
+            <li>
+
+                <a href="funcionarios.html">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Funcionários
+
+                </a>
+
+            </li>
+
+
+            <!-- BIBLIOTECA -->
+
+            <li>
+
+                <a href="biblioteca.html">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    Biblioteca
+
+                </a>
+
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+</aside>
+
+
+<!-- ============================================
+     CONTEÚDO PRINCIPAL
+============================================ -->
+
+<main class="content">
+
+
+    <!-- ========================================
+         HEADER
+    ========================================= -->
+
+    <header>
+
+
+        <div class="header-left">
+
+            <h1>
+
+                📊 Projetos
+
+            </h1>
+
+            <p>
+
+                Acompanhe os projetos e iniciativas
+                do Setor SE.
+
+            </p>
+
+        </div>
+
+
+        <div class="header-right">
+
+
+            <!-- PESQUISA -->
+
+            <div class="search">
+
+                <i
+                    class="fa-solid fa-magnifying-glass">
+                </i>
+
+                <input
+                    type="text"
+                    id="projectSearch"
+                    placeholder="Pesquisar projeto...">
+
+            </div>
+
+
+            <!-- NOTIFICAÇÕES -->
+
+            <button
+                class="notification"
+                type="button">
+
+                <i
+                    class="fa-solid fa-bell">
+                </i>
+
+                <span>
+
+                    3
+
+                </span>
+
+            </button>
+
+
+            <!-- PERFIL -->
+
+            <div class="profile">
+
+                <div class="avatar green-avatar">
+
+                    E
+
+                </div>
+
+                <div>
+
+                    <strong>
+
+                        Eduardo
+
+                    </strong>
+
+                    <small>
+
+                        Engenharia SE
+
+                    </small>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- ========================================
+         RESUMO DOS PROJETOS
+    ========================================= -->
+
+    <section class="project-stats">
+
+
+        <div class="project-stat-card">
+
+            <div>
+
+                <span>
+
+                    Total de projetos
+
+                </span>
+
+                <h2 id="totalProjects">
+
+                    0
+
+                </h2>
+
+            </div>
+
+            <i
+                class="fa-solid fa-diagram-project">
+            </i>
+
+        </div>
+
+
+        <div class="project-stat-card">
+
+            <div>
+
+                <span>
+
+                    Em andamento
+
+                </span>
+
+                <h2 id="activeProjects">
+
+                    0
+
+                </h2>
+
+            </div>
+
+            <i
+                class="fa-solid fa-spinner">
+            </i>
+
+        </div>
+
+
+        <div class="project-stat-card">
+
+            <div>
+
+                <span>
+
+                    Concluídos
+
+                </span>
+
+                <h2 id="completedProjects">
+
+                    0
+
+                </h2>
+
+            </div>
+
+            <i
+                class="fa-solid fa-circle-check">
+            </i>
+
+        </div>
+
+
+        <div class="project-stat-card">
+
+            <div>
+
+                <span>
+
+                    Planejados
+
+                </span>
+
+                <h2 id="plannedProjects">
+
+                    0
+
+                </h2>
+
+            </div>
+
+            <i
+                class="fa-solid fa-calendar-days">
+            </i>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ========================================
+         FILTROS
+    ========================================= -->
+
+    <section class="project-toolbar">
+
+
+        <div class="project-filters">
+
+
+            <button
+                class="filter-button active"
+                data-filter="todos"
+                type="button">
+
+                Todos
+
+            </button>
+
+
+            <button
+                class="filter-button"
+                data-filter="andamento"
+                type="button">
+
+                Em andamento
+
+            </button>
+
+
+            <button
+                class="filter-button"
+                data-filter="concluido"
+                type="button">
+
+                Concluídos
+
+            </button>
+
+
+            <button
+                class="filter-button"
+                data-filter="planejado"
+                type="button">
+
+                Planejados
+
+            </button>
+
+
+        </div>
+
+
+        <!-- NOVO PROJETO -->
+
+        <button
+            class="new-project-button"
+            id="openNewProjectModal"
+            type="button">
+
+            <i class="fa-solid fa-plus"></i>
+
+            Novo projeto
+
+        </button>
+
+
+    </section>
+
+
+    <!-- ========================================
+         ÁREA DOS PROJETOS
+
+         OS CARDS SERÃO GERADOS PELO JAVASCRIPT
+    ========================================= -->
+
+    <section
+        class="projects-grid"
+        id="projectsGrid">
+
+
+        <!-- Os projetos serão carregados aqui -->
+
+
+    </section>
+
+
+    <!-- ========================================
+         MODAL NOVO PROJETO
+    ========================================= -->
+
+    <div
+        class="new-project-modal"
+        id="newProjectModal">
+
+
+        <div class="new-project-modal-content">
+
+
+            <!-- HEADER DO MODAL -->
+
+            <div class="new-project-modal-header">
+
+
+                <div>
+
+                    <span>
+
+                        NOVO PROJETO
+
+                    </span>
+
+                    <h2>
+
+                        Criar novo projeto
+
+                    </h2>
+
+                    <p>
+
+                        Preencha as informações abaixo
+                        para cadastrar um novo projeto.
+
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="close-new-project-modal"
+                    id="closeNewProjectModal"
+                    type="button"
+                    aria-label="Fechar">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+
+            </div>
+
+
+            <!-- FORMULÁRIO -->
+
+            <form
+                id="newProjectForm"
+                class="new-project-form">
+
+
+                <!-- NOME -->
+
+                <div class="form-group">
+
+                    <label
+                        for="newProjectName">
+
+                        Nome do projeto
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="newProjectName"
+                        name="nome"
+                        placeholder="Ex: Projeto HAVANA"
+                        required>
+
+                </div>
+
+
+                <!-- DESCRIÇÃO -->
+
+                <div class="form-group">
+
+                    <label
+                        for="newProjectDescription">
+
+                        Descrição
+
+                    </label>
+
+                    <textarea
+                        id="newProjectDescription"
+                        name="descricao"
+                        placeholder="Descreva brevemente o objetivo do projeto..."
+                        rows="4"
+                        required></textarea>
+
+                </div>
+
+
+                <!-- RESPONSÁVEL E STATUS -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label
+                            for="newProjectResponsible">
+
+                            Responsável
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="newProjectResponsible"
+                            name="responsavel"
+                            placeholder="Nome do responsável"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label
+                            for="newProjectStatus">
+
+                            Status
+
+                        </label>
+
+                        <select
+                            id="newProjectStatus"
+                            name="status"
+                            required>
+
+                            <option value="planejado">
+
+                                Planejado
+
+                            </option>
+
+                            <option value="andamento">
+
+                                Em andamento
+
+                            </option>
+
+                            <option value="concluido">
+
+                                Concluído
+
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- PROGRESSO -->
+
+                <div class="form-group">
+
+                    <label
+                        for="newProjectProgress">
+
+                        Progresso (%)
+
+                    </label>
+
+                    <div class="progress-input">
+
+                        <input
+                            type="number"
+                            id="newProjectProgress"
+                            name="progresso"
+                            min="0"
+                            max="100"
+                            value="0"
+                            required>
+
+                        <span>
+
+                            %
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DATA DE INÍCIO E PRAZO -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label
+                            for="newProjectStart">
+
+                            Data de início
+
+                        </label>
+
+                        <input
+                            type="month"
+                            id="newProjectStart"
+                            name="inicio"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label
+                            for="newProjectDeadline">
+
+                            Prazo previsto
+
+                        </label>
+
+                        <input
+                            type="month"
+                            id="newProjectDeadline"
+                            name="prazo">
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- ÍCONE -->
+
+                <div class="form-group">
+
+                    <label
+                        for="newProjectIcon">
+
+                        Ícone do projeto
+
+                    </label>
+
+                    <select
+                        id="newProjectIcon"
+                        name="icone">
+
+                        <option value="fa-diagram-project">
+
+                            Projeto
+
+                        </option>
+
+                        <option value="fa-gears">
+
+                            Automação
+
+                        </option>
+
+                        <option value="fa-chart-line">
+
+                            Indicadores
+
+                        </option>
+
+                        <option value="fa-lightbulb">
+
+                            Inovação
+
+                        </option>
+
+                        <option value="fa-robot">
+
+                            Tecnologia
+
+                        </option>
+
+                        <option value="fa-folder-open">
+
+                            Documentação
+
+                        </option>
+
+                        <option value="fa-industry">
+
+                            Produção
+
+                        </option>
+
+                        <option value="fa-code">
+
+                            Sistema
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- AÇÕES -->
+
+                <div class="new-project-form-actions">
+
+
+                    <button
+                        type="button"
+                        class="secondary-button"
+                        id="cancelNewProject">
+
+                        Cancelar
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="primary-button">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Criar projeto
+
+                    </button>
+
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================================
+         OVERLAY DO MODAL DE NOVO PROJETO
+    ========================================= -->
+
+    <div
+        class="new-project-modal-overlay"
+        id="newProjectModalOverlay">
+    </div>
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+
+        <div class="footer-left">
+
+            <strong>
+
+                SE Hub
+
+            </strong>
+
+            <span>
+
+                Sistema Interno de Gestão do Setor SE
+
+            </span>
+
+        </div>
+
+
+        <div class="footer-right">
+
+            Desenvolvido por Eduardo Felipe
+
+        </div>
+
+
+    </footer>
+
+
+</main>
+
+
+<!-- ========================================
+     JAVASCRIPT
+========================================= -->
+
+<script src="../js/app.js"></script>
+
+<script src="../js/dashboard.js"></script>
+
+<script src="../js/projetos.js"></script>
+
+
+</body>
+
+</html>

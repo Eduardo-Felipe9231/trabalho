@@ -1,0 +1,557 @@
+/* ============================================
+   FUNCIONÁRIOS
+============================================ */
+
+.status-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+.status-badge.active{
+
+    background:#e8f8ef;
+
+    color:#219653;
+
+}
+
+.status-badge.vacation{
+
+    background:#fdeaf2;
+
+    color:#d81b60;
+
+}
+
+.status-badge.planning{
+
+    background:#eaf3ff;
+
+    color:#2878c8;
+
+}
+
+
+/* ============================================
+   BOTÃO VISUALIZAR
+============================================ */
+
+.view{
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#edf4fc;
+
+    color:var(--primary);
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.view:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ============================================
+   PAINEL LATERAL
+============================================ */
+
+.employee-panel{
+
+    position:fixed;
+
+    top:0;
+
+    right:-500px;
+
+    width:500px;
+
+    max-width:100%;
+
+    height:100vh;
+
+    background:white;
+
+    z-index:1001;
+
+    box-shadow:-15px 0 40px rgba(0,0,0,.15);
+
+    overflow-y:auto;
+
+    transition:right .4s ease;
+
+}
+
+.employee-panel.open{
+
+    right:0;
+
+}
+
+
+/* ============================================
+   CABEÇALHO DO PAINEL
+============================================ */
+
+.employee-panel-header{
+
+    padding:30px;
+
+    background:linear-gradient(
+        135deg,
+        #1d3557,
+        #274c77
+    );
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+}
+
+.employee-panel-header span{
+
+    font-size:13px;
+
+    opacity:.75;
+
+}
+
+.employee-panel-header h2{
+
+    margin-top:5px;
+
+    font-size:26px;
+
+}
+
+.close-panel{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.25s;
+
+}
+
+.close-panel:hover{
+
+    background:rgba(255,255,255,.3);
+
+    transform:rotate(90deg);
+
+}
+
+
+/* ============================================
+   PERFIL
+============================================ */
+
+.employee-profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:30px;
+
+    border-bottom:1px solid #edf0f4;
+
+}
+
+.employee-large-avatar{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:22px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    flex-shrink:0;
+
+}
+
+.employee-profile h3{
+
+    font-size:21px;
+
+    margin-bottom:4px;
+
+}
+
+.employee-profile p{
+
+    color:#7b8794;
+
+    margin-bottom:10px;
+
+}
+
+
+/* ============================================
+   INFORMAÇÕES
+============================================ */
+
+.employee-details{
+
+    padding:25px 30px;
+
+    display:grid;
+
+    gap:15px;
+
+}
+
+.detail-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px;
+
+    background:#f7f9fc;
+
+    border-radius:14px;
+
+}
+
+.detail-item > i{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:12px;
+
+    background:#eaf3ff;
+
+    color:var(--primary);
+
+}
+
+.detail-item span{
+
+    display:block;
+
+    color:#7b8794;
+
+    font-size:12px;
+
+    margin-bottom:3px;
+
+}
+
+.detail-item strong{
+
+    font-size:13px;
+
+}
+
+
+/* ============================================
+   SEÇÕES DO PAINEL
+============================================ */
+
+.panel-section{
+
+    padding:0 30px 25px;
+
+}
+
+.panel-section-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+}
+
+.panel-section-title h3{
+
+    font-size:17px;
+
+}
+
+.panel-section-title span{
+
+    background:#edf4fc;
+
+    color:var(--primary);
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+
+/* ============================================
+   PROJETOS
+============================================ */
+
+.panel-project{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px;
+
+    background:#f7f9fc;
+
+    border-radius:12px;
+
+    margin-bottom:10px;
+
+}
+
+.panel-project:last-child{
+
+    margin-bottom:0;
+
+}
+
+.panel-project strong{
+
+    display:block;
+
+    font-size:13px;
+
+    margin-bottom:4px;
+
+}
+
+.panel-project small{
+
+    color:#7b8794;
+
+}
+
+.panel-project > span{
+
+    font-size:13px;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+
+/* ============================================
+   HISTÓRICO DE FÉRIAS
+============================================ */
+
+.vacation-history{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+}
+
+.vacation-history > div{
+
+    padding:15px;
+
+    background:#f7f9fc;
+
+    border-radius:12px;
+
+}
+
+.vacation-history span{
+
+    display:block;
+
+    color:#7b8794;
+
+    font-size:12px;
+
+    margin-bottom:5px;
+
+}
+
+.vacation-history strong{
+
+    font-size:15px;
+
+}
+
+
+/* ============================================
+   AÇÕES
+============================================ */
+
+.panel-actions{
+
+    padding:10px 30px 30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.panel-actions button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-family:inherit;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.edit-button{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.edit-button:hover{
+
+    background:var(--primary-light);
+
+    transform:translateY(-2px);
+
+}
+
+.secondary-button{
+
+    background:#edf4fc;
+
+    color:var(--primary);
+
+}
+
+.secondary-button:hover{
+
+    background:#dceafa;
+
+}
+
+
+/* ============================================
+   OVERLAY
+============================================ */
+
+.panel-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(15,23,42,.45);
+
+    backdrop-filter:blur(3px);
+
+    z-index:1000;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+}
+
+.panel-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
