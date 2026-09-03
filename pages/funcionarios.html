@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>SE Hub | Funcionários</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/funcionarios.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+
+            <i class="fa-solid fa-industry"></i>
+
+        </div>
+
+        <div>
+
+            <h2>SE Hub</h2>
+
+            <p>CPW</p>
+
+
+        </div>
+
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li>
+
+                <a href="../index.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="ferias.html">
+
+                    <i class="fa-solid fa-umbrella-beach"></i>
+
+                    Férias
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="projetos.html">
+
+                    <i class="fa-solid fa-diagram-project"></i>
+
+                    Projetos
+
+                </a>
+
+            </li>
+
+            <li class="active">
+
+                <a href="#">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Funcionários
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="biblioteca.html">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    Biblioteca
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+</aside>
+
+<main class="content">
+
+<header>
+
+<div class="header-left">
+
+<h1>
+
+👥 Funcionários
+
+</h1>
+
+<p>
+
+Gerenciamento da equipe do Setor SE.
+
+</p>
+
+</div>
+
+<div class="header-right">
+
+<div class="search">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+placeholder="Pesquisar funcionário...">
+
+</div>
+
+<button class="notification">
+
+<i class="fa-solid fa-user-plus"></i>
+
+</button>
+
+</div>
+
+</header>
+
+<section class="box">
+
+<div class="box-title">
+
+<h3>
+
+Equipe
+
+</h3>
+
+<button>
+
+Novo Funcionário
+
+</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th></th>
+
+<th>Nome</th>
+
+<th>Setor</th>
+
+<th>Status</th>
+
+<th>Projetos</th>
+
+<th>Ações</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+    <!-- EDUARDO -->
+
+    <tr>
+
+        <td>
+
+            <div class="avatar green-avatar">
+
+                E
+
+            </div>
+
+        </td>
+
+        <td>
+
+            Eduardo
+
+        </td>
+
+        <td>
+
+             SE
+
+        </td>
+
+        <td>
+
+            <span class="status-badge active">
+
+                Ativo
+
+            </span>
+
+        </td>
+
+        <td>
+
+            3
+
+        </td>
+
+        <td>
+
+            <button
+                class="view"
+                data-employee="eduardo">
+
+                <i class="fa-solid fa-eye"></i>
+
+            </button>
+
+        </td>
+
+    </tr>
+
+
+    <!-- FABIANE -->
+
+    <tr>
+
+        <td>
+
+            <div class="avatar pink-avatar">
+
+                F
+
+            </div>
+
+        </td>
+
+        <td>
+
+            Fabiane
+
+        </td>
+
+        <td>
+
+             SE
+
+        </td>
+
+        <td>
+
+            <span class="status-badge vacation">
+
+                Férias
+
+            </span>
+
+        </td>
+
+        <td>
+
+            5
+
+        </td>
+
+        <td>
+
+            <button
+                class="view"
+                data-employee="fabiane">
+
+                <i class="fa-solid fa-eye"></i>
+
+            </button>
+
+        </td>
+
+    </tr>
+
+
+    <!-- ANA BEATRIZ -->
+
+    <tr>
+
+        <td>
+
+            <div class="avatar blue-avatar">
+
+                A
+
+            </div>
+
+        </td>
+
+        <td>
+
+            Ana Beatriz
+
+        </td>
+
+        <td>
+
+             SE
+
+        </td>
+
+        <td>
+
+            <span class="status-badge planning">
+
+                Planejada
+
+            </span>
+
+        </td>
+
+        <td>
+
+            2
+
+        </td>
+
+        <td>
+
+            <button
+                class="view"
+                data-employee="ana">
+
+                <i class="fa-solid fa-eye"></i>
+
+            </button>
+
+        </td>
+
+    </tr>
+
+
+    <!-- ÍTALO -->
+
+    <tr>
+
+        <td>
+
+            <div class="avatar red-avatar">
+
+                I
+
+            </div>
+
+        </td>
+
+        <td>
+
+            Ítalo
+
+        </td>
+
+        <td>
+
+            SE
+
+        </td>
+
+        <td>
+
+            <span class="status-badge active">
+
+                Ativo
+
+            </span>
+
+        </td>
+
+        <td>
+
+            4
+
+        </td>
+
+        <td>
+
+            <button
+                class="view"
+                data-employee="italo">
+
+                <i class="fa-solid fa-eye"></i>
+
+            </button>
+
+        </td>
+
+    </tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+<!-- ============================================
+     PAINEL LATERAL DE DETALHES
+============================================ -->
+
+<div class="employee-panel" id="employeePanel">
+
+    <div class="employee-panel-header">
+
+        <div>
+
+            <span>
+
+                Perfil do funcionário
+
+            </span>
+
+            <h2 id="panelEmployeeName">
+
+                Eduardo
+
+            </h2>
+
+        </div>
+
+        <button
+            class="close-panel"
+            id="closePanel">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- PERFIL -->
+
+    <div class="employee-profile">
+
+        <div
+            class="employee-large-avatar green-avatar"
+            id="panelAvatar">
+
+            E
+
+        </div>
+
+        <div>
+
+            <h3 id="panelName">
+
+                Eduardo
+
+            </h3>
+
+            <p>
+
+                Engenharia SE
+
+            </p>
+
+            <span
+                class="status-badge active"
+                id="panelStatus">
+
+                Ativo
+
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- INFORMAÇÕES -->
+
+    <div class="employee-details">
+
+        <div class="detail-item">
+
+            <i class="fa-solid fa-calendar-check"></i>
+
+            <div>
+
+                <span>
+
+                    Data de admissão
+
+                </span>
+
+                <strong>
+
+                    10/01/2024
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="detail-item">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <div>
+
+                <span>
+
+                    Período aquisitivo
+
+                </span>
+
+                <strong>
+
+                    10/01/2025 → 09/01/2026
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="detail-item">
+
+            <i class="fa-solid fa-hourglass-half"></i>
+
+            <div>
+
+                <span>
+
+                    Período concessivo
+
+                </span>
+
+                <strong>
+
+                    10/01/2026 → 09/01/2027
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="detail-item">
+
+            <i class="fa-solid fa-umbrella-beach"></i>
+
+            <div>
+
+                <span>
+
+                    Férias disponíveis
+
+                </span>
+
+                <strong>
+
+                    30 dias
+
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROJETOS -->
+
+    <div class="panel-section">
+
+        <div class="panel-section-title">
+
+            <h3>
+
+                Projetos
+
+            </h3>
+
+            <span>
+
+                3
+
+            </span>
+
+        </div>
+
+
+        <div class="panel-project">
+
+            <div>
+
+                <strong>
+
+                    Sistema de Férias
+
+                </strong>
+
+                <small>
+
+                    Em andamento
+
+                </small>
+
+            </div>
+
+            <span>
+
+                85%
+
+            </span>
+
+        </div>
+
+
+        <div class="panel-project">
+
+            <div>
+
+                <strong>
+
+                    Dashboard Produção
+
+                </strong>
+
+                <small>
+
+                    Em andamento
+
+                </small>
+
+            </div>
+
+            <span>
+
+                60%
+
+            </span>
+
+        </div>
+
+
+        <div class="panel-project">
+
+            <div>
+
+                <strong>
+
+                    Automação KITKAT
+
+                </strong>
+
+                <small>
+
+                    Em andamento
+
+                </small>
+
+            </div>
+
+            <span>
+
+                40%
+
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- HISTÓRICO -->
+
+    <div class="panel-section">
+
+        <div class="panel-section-title">
+
+            <h3>
+
+                Histórico de férias
+
+            </h3>
+
+        </div>
+
+        <div class="vacation-history">
+
+            <div>
+
+                <span>
+
+                    2025
+
+                </span>
+
+                <strong>
+
+                    20 dias
+
+                </strong>
+
+            </div>
+
+            <div>
+
+                <span>
+
+                    2024
+
+                </span>
+
+                <strong>
+
+                    10 dias
+
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- AÇÕES -->
+
+    <div class="panel-actions">
+
+        <button class="edit-button">
+
+            <i class="fa-solid fa-pen"></i>
+
+            Editar funcionário
+
+        </button>
+
+        <button class="secondary-button">
+
+            <i class="fa-solid fa-calendar-plus"></i>
+
+            Programar férias
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ============================================
+     SOBREPOSIÇÃO DO PAINEL
+============================================ -->
+
+<div
+    class="panel-overlay"
+    id="panelOverlay">
+</div>
+
+
+<footer>
+
+    <div class="footer-left">
+
+        <strong>
+
+            SE Hub
+
+        </strong>
+
+        <span>
+
+            Sistema Interno de Gestão do Setor SE
+
+        </span>
+
+    </div>
+
+    <div class="footer-right">
+
+        Desenvolvido por Eduardo Felipe
+
+    </div>
+
+</footer>
+
+</main>
+
+
+<script src="../js/app.js"></script>
+
+<script src="../js/dashboard.js"></script>
+
+<script src="../js/funcionarios.js"></script>
+
+
+</body>
+
+</html>

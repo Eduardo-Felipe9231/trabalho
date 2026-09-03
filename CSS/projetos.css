@@ -1,0 +1,2448 @@
+/* ============================================
+   PÁGINA DE PROJETOS
+============================================ */
+
+
+/* ============================================
+   ESTATÍSTICAS
+============================================ */
+
+.project-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.project-stat-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, .05);
+
+    border:
+        1px solid #edf0f4;
+
+    transition: .25s;
+
+}
+
+
+.project-stat-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, .08);
+
+}
+
+
+.project-stat-card span {
+
+    display: block;
+
+    color: #7b8794;
+
+    font-size: 13px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.project-stat-card h2 {
+
+    font-size: 28px;
+
+    color: #1f2937;
+
+}
+
+
+.project-stat-card > i {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #edf4fc;
+
+    color: var(--primary);
+
+    font-size: 20px;
+
+}
+
+
+/* ============================================
+   BARRA DE FERRAMENTAS
+============================================ */
+
+.project-toolbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.project-filters {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.filter-button {
+
+    border: none;
+
+    background: white;
+
+    color: #6b7280;
+
+    padding:
+        10px 18px;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+    border:
+        1px solid #edf0f4;
+
+}
+
+
+.filter-button:hover {
+
+    color: var(--primary);
+
+    border-color:
+        var(--primary);
+
+}
+
+
+.filter-button.active {
+
+    background:
+        var(--primary);
+
+    color: white;
+
+    border-color:
+        var(--primary);
+
+}
+
+
+.new-project-button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    border: none;
+
+    padding:
+        11px 18px;
+
+    border-radius: 10px;
+
+    background:
+        var(--primary);
+
+    color: white;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+
+.new-project-button:hover {
+
+    background:
+        var(--primary-light);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* ============================================
+   GRID DE PROJETOS
+============================================ */
+
+.projects-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+/* ============================================
+   CARD DO PROJETO
+============================================ */
+
+.project-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    border:
+        1px solid #edf0f4;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, .04);
+
+    transition:
+        transform .25s,
+        box-shadow .25s,
+        opacity .25s;
+
+}
+
+
+.project-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, .08);
+
+}
+
+
+.project-card.hidden {
+
+    display: none;
+
+}
+
+
+/* ============================================
+   TOPO DO CARD
+============================================ */
+
+.project-card-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.project-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 19px;
+
+}
+
+
+/* CORES DOS ÍCONES */
+
+.green-project {
+
+    background:
+        #e8f8ef;
+
+    color:
+        #219653;
+
+}
+
+
+.blue-project {
+
+    background:
+        #eaf3ff;
+
+    color:
+        #2878c8;
+
+}
+
+
+.red-project {
+
+    background:
+        #fdeaea;
+
+    color:
+        #d93030;
+
+}
+
+
+.pink-project {
+
+    background:
+        #fdeaf2;
+
+    color:
+        #d81b60;
+
+}
+
+
+.yellow-project {
+
+    background:
+        #fff7df;
+
+    color:
+        #d99b00;
+
+}
+
+
+.purple-project {
+
+    background:
+        #f1eafe;
+
+    color:
+        #7c4dff;
+
+}
+
+
+/* ============================================
+   STATUS
+============================================ */
+
+.project-status {
+
+    padding:
+        6px 11px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.status-progress {
+
+    background:
+        #eaf3ff;
+
+    color:
+        #2878c8;
+
+}
+
+
+.status-completed {
+
+    background:
+        #e8f8ef;
+
+    color:
+        #219653;
+
+}
+
+
+.status-planned {
+
+    background:
+        #f1eafe;
+
+    color:
+        #7c4dff;
+
+}
+
+
+/* ============================================
+   TÍTULO E DESCRIÇÃO
+============================================ */
+
+.project-card h3 {
+
+    font-size: 17px;
+
+    color:
+        #1f2937;
+
+    margin-bottom: 10px;
+
+}
+
+
+.project-card > p {
+
+    font-size: 13px;
+
+    color:
+        #7b8794;
+
+    line-height: 1.7;
+
+    min-height: 66px;
+
+    margin-bottom: 22px;
+
+}
+
+
+/* ============================================
+   RESPONSÁVEL
+============================================ */
+
+.project-responsible {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+        12px 0;
+
+    border-top:
+        1px solid #f0f2f5;
+
+    border-bottom:
+        1px solid #f0f2f5;
+
+}
+
+
+.project-responsible .avatar {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 11px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+.project-responsible span {
+
+    display: block;
+
+    font-size: 11px;
+
+    color:
+        #9aa4b2;
+
+    margin-bottom: 3px;
+
+}
+
+
+.project-responsible strong {
+
+    font-size: 13px;
+
+    color:
+        #374151;
+
+}
+
+
+/* ============================================
+   PROGRESSO
+============================================ */
+
+.project-progress {
+
+    margin-top: 20px;
+
+}
+
+
+.progress-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 8px;
+
+}
+
+
+.progress-header span {
+
+    font-size: 12px;
+
+    color:
+        #7b8794;
+
+}
+
+
+.progress-header strong {
+
+    font-size: 12px;
+
+    color:
+        #374151;
+
+}
+
+
+.progress {
+
+    height: 7px;
+
+    width: 100%;
+
+    background:
+        #edf0f4;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+.progress-bar {
+
+    height: 100%;
+
+    border-radius: 10px;
+
+    transition:
+        width .8s ease;
+
+}
+
+
+/* CORES DAS BARRAS */
+
+.green-bar {
+
+    background:
+        #219653;
+
+}
+
+
+.blue-bar {
+
+    background:
+        #2878c8;
+
+}
+
+
+.red-bar {
+
+    background:
+        #d93030;
+
+}
+
+
+.pink-bar {
+
+    background:
+        #d81b60;
+
+}
+
+
+.yellow-bar {
+
+    background:
+        #d99b00;
+
+}
+
+
+.purple-bar {
+
+    background:
+        #7c4dff;
+
+}
+
+
+/* ============================================
+   RODAPÉ DO CARD
+============================================ */
+
+.project-card-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 22px;
+
+}
+
+
+.project-card-footer > span {
+
+    color:
+        #8a95a3;
+
+    font-size: 11px;
+
+}
+
+
+.project-card-footer > span i {
+
+    margin-right: 4px;
+
+}
+
+
+.project-view-button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    border: none;
+
+    background: transparent;
+
+    color:
+        var(--primary);
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+
+.project-view-button:hover {
+
+    gap: 10px;
+
+}
+
+
+/* ============================================
+   MODAL
+============================================ */
+
+.project-modal {
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 650px;
+
+    max-width:
+        calc(100% - 40px);
+
+    max-height:
+        calc(100vh - 40px);
+
+    background: white;
+
+    border-radius: 20px;
+
+    z-index: 1002;
+
+    transform:
+        translate(-50%, -45%);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    overflow-y: auto;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, .25);
+
+    transition:
+        .3s ease;
+
+}
+
+
+.project-modal.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translate(-50%, -50%);
+
+}
+
+
+/* ============================================
+   CABEÇALHO DO MODAL
+============================================ */
+
+.project-modal-header {
+
+    padding:
+        25px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    border-bottom:
+        1px solid #edf0f4;
+
+}
+
+
+.project-modal-label {
+
+    font-size: 12px;
+
+    color:
+        #8a95a3;
+
+}
+
+
+.project-modal-header h2 {
+
+    font-size: 24px;
+
+    margin-top: 5px;
+
+    color:
+        #1f2937;
+
+}
+
+
+.close-project-modal {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background:
+        #f5f7fa;
+
+    color:
+        #6b7280;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    transition: .25s;
+
+}
+
+
+.close-project-modal:hover {
+
+    background:
+        #edf0f4;
+
+    color:
+        #1f2937;
+
+    transform:
+        rotate(90deg);
+
+}
+
+
+/* ============================================
+   CORPO DO MODAL
+============================================ */
+
+.project-modal-body {
+
+    padding:
+        30px;
+
+}
+
+
+.modal-project-description h3,
+.modal-project-team h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.modal-project-description p {
+
+    color:
+        #7b8794;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+/* ============================================
+   INFORMAÇÕES
+============================================ */
+
+.modal-project-info {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+}
+
+
+.modal-info-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+        15px;
+
+    background:
+        #f7f9fc;
+
+    border-radius: 12px;
+
+}
+
+
+.modal-info-item > i {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background:
+        #eaf3ff;
+
+    color:
+        var(--primary);
+
+}
+
+
+.modal-info-item span {
+
+    display: block;
+
+    font-size: 11px;
+
+    color:
+        #8a95a3;
+
+    margin-bottom: 3px;
+
+}
+
+
+.modal-info-item strong {
+
+    font-size: 13px;
+
+    color:
+        #374151;
+
+}
+
+
+/* ============================================
+   PROGRESSO DO MODAL
+============================================ */
+
+.modal-project-progress {
+
+    margin-top: 25px;
+
+}
+
+
+.modal-project-progress .progress {
+
+    height: 9px;
+
+}
+
+
+/* ============================================
+   EQUIPE
+============================================ */
+
+.modal-project-team {
+
+    margin-top: 28px;
+
+}
+
+
+.modal-team-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+.modal-team-member {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding:
+        8px 12px 8px 8px;
+
+    background:
+        #f7f9fc;
+
+    border-radius: 30px;
+
+}
+
+
+.modal-team-member .avatar {
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.modal-team-member span {
+
+    font-size: 12px;
+
+    color:
+        #4b5563;
+
+}
+
+
+/* ============================================
+   RODAPÉ DO MODAL
+============================================ */
+
+.project-modal-footer {
+
+    padding:
+        0 30px 25px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+}
+
+
+.project-modal-footer .secondary-button {
+
+    padding:
+        11px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        #edf4fc;
+
+    color:
+        var(--primary);
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+
+.project-modal-footer .secondary-button:hover {
+
+    background:
+        #dceafa;
+
+}
+
+
+/* ============================================
+   OVERLAY
+============================================ */
+
+.project-modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(15, 23, 42, .55);
+
+    backdrop-filter:
+        blur(3px);
+
+    z-index: 1001;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .3s;
+
+}
+
+
+.project-modal-overlay.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+/* ============================================
+   MODAL - NOVO PROJETO
+============================================ */
+
+.new-project-modal {
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 720px;
+
+    max-width:
+        calc(100% - 40px);
+
+    max-height:
+        calc(100vh - 40px);
+
+    background: white;
+
+    border-radius: 22px;
+
+    z-index: 1003;
+
+    transform:
+        translate(-50%, -45%);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    overflow-y: auto;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, .25);
+
+    transition:
+        .3s ease;
+
+}
+
+
+.new-project-modal.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+        translate(-50%, -50%);
+
+}
+
+
+/* ============================================
+   OVERLAY - NOVO PROJETO
+============================================ */
+
+.new-project-modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(15, 23, 42, .55);
+
+    backdrop-filter:
+        blur(4px);
+
+    z-index: 1002;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        .3s ease;
+
+}
+
+
+.new-project-modal-overlay.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+/* ============================================
+   CONTEÚDO DO MODAL
+============================================ */
+
+.new-project-modal-content {
+
+    width: 100%;
+
+    background: white;
+
+    border-radius: 22px;
+
+}
+
+
+/* ============================================
+   HEADER DO NOVO PROJETO
+============================================ */
+
+.new-project-modal-header {
+
+    padding:
+        28px 32px 24px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    border-bottom:
+        1px solid #edf0f4;
+
+}
+
+
+.new-project-modal-header span {
+
+    display: block;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color:
+        var(--primary);
+
+    margin-bottom: 8px;
+
+}
+
+
+.new-project-modal-header h2 {
+
+    font-size: 24px;
+
+    color:
+        #1f2937;
+
+    margin-bottom: 7px;
+
+}
+
+
+.new-project-modal-header p {
+
+    font-size: 13px;
+
+    color:
+        #7b8794;
+
+    line-height: 1.6;
+
+}
+
+
+.close-new-project-modal {
+
+    width: 42px;
+
+    height: 42px;
+
+    min-width: 42px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        #f5f7fa;
+
+    color:
+        #6b7280;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition:
+        .25s;
+
+}
+
+
+.close-new-project-modal:hover {
+
+    background:
+        #edf0f4;
+
+    color:
+        #1f2937;
+
+    transform:
+        rotate(90deg);
+
+}
+
+
+/* ============================================
+   FORMULÁRIO
+============================================ */
+
+.new-project-form {
+
+    padding:
+        28px 32px 32px;
+
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 20px;
+
+}
+
+
+.form-group label {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color:
+        #374151;
+
+    margin-bottom: 8px;
+
+}
+
+
+.form-group input,
+
+.form-group textarea,
+
+.form-group select {
+
+    width: 100%;
+
+    border:
+        1px solid #dfe4ea;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color:
+        #374151;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        .25s;
+
+}
+
+
+.form-group input,
+
+.form-group select {
+
+    height: 46px;
+
+    padding:
+        0 14px;
+
+}
+
+
+.form-group textarea {
+
+    padding:
+        13px 14px;
+
+    resize: vertical;
+
+    min-height: 110px;
+
+}
+
+
+.form-group input:focus,
+
+.form-group textarea:focus,
+
+.form-group select:focus {
+
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(40, 120, 200, .10);
+
+}
+
+
+.form-group input::placeholder,
+
+.form-group textarea::placeholder {
+
+    color:
+        #a5adb8;
+
+}
+
+
+/* ============================================
+   LINHA COM DUAS COLUNAS
+============================================ */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+
+}
+
+
+/* ============================================
+   INPUT DE PROGRESSO
+============================================ */
+
+.progress-input {
+
+    position: relative;
+
+}
+
+
+.progress-input input {
+
+    padding-right:
+        45px;
+
+}
+
+
+.progress-input span {
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    color:
+        #7b8794;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    pointer-events: none;
+
+}
+
+
+/* ============================================
+   BOTÕES DO FORMULÁRIO
+============================================ */
+
+.new-project-form-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 28px;
+
+    padding-top: 24px;
+
+    border-top:
+        1px solid #edf0f4;
+
+}
+
+
+.new-project-form-actions button {
+
+    height: 46px;
+
+    padding:
+        0 20px;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        .25s;
+
+}
+
+
+.new-project-form-actions .secondary-button {
+
+    border:
+        1px solid #dfe4ea;
+
+    background: white;
+
+    color:
+        #6b7280;
+
+}
+
+
+.new-project-form-actions .secondary-button:hover {
+
+    background:
+        #f7f9fc;
+
+    color:
+        #374151;
+
+}
+
+
+.new-project-form-actions .primary-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    border: none;
+
+    background:
+        var(--primary);
+
+    color: white;
+
+}
+
+
+.new-project-form-actions .primary-button:hover {
+
+    background:
+        var(--primary-light);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* ============================================
+   SCROLL DO MODAL
+============================================ */
+
+.new-project-modal::-webkit-scrollbar {
+
+    width: 6px;
+
+}
+
+
+.new-project-modal::-webkit-scrollbar-track {
+
+    background:
+        transparent;
+
+}
+
+
+.new-project-modal::-webkit-scrollbar-thumb {
+
+    background:
+        #d5dbe3;
+
+    border-radius: 10px;
+
+}
+
+/* ============================================
+   RESPONSIVIDADE
+============================================ */
+
+@media (max-width: 1200px) {
+
+    .projects-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+    .project-stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .project-toolbar {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 15px;
+
+    }
+
+    .new-project-button {
+
+        justify-content: center;
+
+    }
+
+    .projects-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .project-stats {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .modal-project-info {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .project-card {
+
+        padding: 18px;
+
+    }
+
+    .project-card-footer {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+    .project-modal-body {
+
+        padding: 20px;
+
+    }
+
+    .project-modal-header {
+
+        padding: 20px;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .new-project-modal {
+
+        width:
+            calc(100% - 24px);
+
+        max-height:
+            calc(100vh - 24px);
+
+    }
+
+
+    .new-project-modal-header {
+
+        padding:
+            22px;
+
+    }
+
+
+    .new-project-form {
+
+        padding:
+            22px;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 0;
+
+    }
+
+
+    .new-project-form-actions {
+
+        flex-direction: column-reverse;
+
+    }
+
+
+    .new-project-form-actions button {
+
+        width: 100%;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .new-project-modal-header h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .new-project-modal-header p {
+
+        font-size: 12px;
+
+    }
+
+}
+
+/* ============================================
+   MODAL - NOVO PROJETO
+============================================ */
+
+.new-project-modal {
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 700px;
+
+    max-width:
+        calc(100% - 40px);
+
+    max-height:
+        calc(100vh - 40px);
+
+    background: white;
+
+    border-radius: 22px;
+
+    z-index: 1003;
+
+    transform:
+        translate(-50%, -45%);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    overflow-y: auto;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, .25);
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease,
+        visibility .3s ease;
+
+}
+
+
+.new-project-modal.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translate(-50%, -50%);
+
+}
+
+
+/* ============================================
+   OVERLAY - NOVO PROJETO
+============================================ */
+
+.new-project-modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(15, 23, 42, .55);
+
+    backdrop-filter:
+        blur(3px);
+
+    z-index: 1002;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        .3s ease;
+
+}
+
+
+.new-project-modal-overlay.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+/* ============================================
+   CABEÇALHO DO MODAL
+============================================ */
+
+.new-project-modal-header {
+
+    padding:
+        26px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    border-bottom:
+        1px solid #edf0f4;
+
+}
+
+
+.new-project-modal-header span {
+
+    display: block;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color:
+        var(--primary);
+
+    margin-bottom: 5px;
+
+}
+
+
+.new-project-modal-header h2 {
+
+    font-size: 24px;
+
+    color:
+        #1f2937;
+
+    margin-bottom: 7px;
+
+}
+
+
+.new-project-modal-header p {
+
+    font-size: 13px;
+
+    color:
+        #7b8794;
+
+    line-height: 1.6;
+
+}
+
+
+.close-new-project-modal {
+
+    min-width: 42px;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        #f5f7fa;
+
+    color:
+        #6b7280;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: .25s;
+
+}
+
+
+.close-new-project-modal:hover {
+
+    background:
+        #edf0f4;
+
+    color:
+        #1f2937;
+
+    transform:
+        rotate(90deg);
+
+}
+
+
+/* ============================================
+   FORMULÁRIO
+============================================ */
+
+.new-project-form {
+
+    padding:
+        30px;
+
+}
+
+
+/* ============================================
+   GRUPO DO FORMULÁRIO
+============================================ */
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 20px;
+
+}
+
+
+.form-group label {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color:
+        #374151;
+
+    margin-bottom: 8px;
+
+}
+
+
+/* ============================================
+   INPUTS
+============================================ */
+
+.form-group input,
+
+.form-group textarea,
+
+.form-group select {
+
+    width: 100%;
+
+    border:
+        1px solid #dfe4ea;
+
+    border-radius: 10px;
+
+    padding:
+        12px 14px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    color:
+        #374151;
+
+    background:
+        #ffffff;
+
+    outline: none;
+
+    transition:
+        border-color .25s,
+        box-shadow .25s;
+
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 110px;
+
+}
+
+
+.form-group input:focus,
+
+.form-group textarea:focus,
+
+.form-group select:focus {
+
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(40, 120, 200, .10);
+
+}
+
+
+/* ============================================
+   LINHAS DO FORMULÁRIO
+============================================ */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+
+}
+
+
+/* ============================================
+   INPUT DE PROGRESSO
+============================================ */
+
+.progress-input {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.progress-input input {
+
+    padding-right: 42px;
+
+}
+
+
+.progress-input span {
+
+    position: absolute;
+
+    right: 15px;
+
+    color:
+        #7b8794;
+
+    font-size: 13px;
+
+    pointer-events: none;
+
+}
+
+
+/* ============================================
+   AÇÕES DO FORMULÁRIO
+============================================ */
+
+.new-project-form-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    padding-top: 10px;
+
+    margin-top: 10px;
+
+    border-top:
+        1px solid #edf0f4;
+
+}
+
+
+.new-project-form-actions button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 44px;
+
+    padding:
+        0 20px;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+
+/* ============================================
+   BOTÃO SECUNDÁRIO
+============================================ */
+
+.new-project-form-actions .secondary-button {
+
+    border:
+        1px solid #dfe4ea;
+
+    background:
+        white;
+
+    color:
+        #6b7280;
+
+}
+
+
+.new-project-form-actions .secondary-button:hover {
+
+    background:
+        #f5f7fa;
+
+    color:
+        #374151;
+
+}
+
+
+/* ============================================
+   BOTÃO PRINCIPAL
+============================================ */
+
+.new-project-form-actions .primary-button {
+
+    border: none;
+
+    background:
+        var(--primary);
+
+    color: white;
+
+}
+
+
+.new-project-form-actions .primary-button:hover {
+
+    background:
+        var(--primary-light);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* ============================================
+   SCROLL DO MODAL
+============================================ */
+
+.new-project-modal::-webkit-scrollbar {
+
+    width: 6px;
+
+}
+
+
+.new-project-modal::-webkit-scrollbar-track {
+
+    background:
+        transparent;
+
+}
+
+
+.new-project-modal::-webkit-scrollbar-thumb {
+
+    background:
+        #d9dee5;
+
+    border-radius: 10px;
+
+}
+
+
+/* ============================================
+   RESPONSIVIDADE DO FORMULÁRIO
+============================================ */
+
+@media (max-width: 768px) {
+
+    .new-project-modal {
+
+        width:
+            calc(100% - 24px);
+
+        max-height:
+            calc(100vh - 24px);
+
+    }
+
+
+    .new-project-modal-header {
+
+        padding:
+            22px;
+
+    }
+
+
+    .new-project-form {
+
+        padding:
+            22px;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 0;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .new-project-modal-header {
+
+        padding:
+            20px;
+
+    }
+
+
+    .new-project-modal-header h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .new-project-form {
+
+        padding:
+            20px;
+
+    }
+
+
+    .new-project-form-actions {
+
+        flex-direction: column-reverse;
+
+    }
+
+
+    .new-project-form-actions button {
+
+        width: 100%;
+
+    }
+
+}

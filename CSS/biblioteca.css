@@ -1,0 +1,3812 @@
+/* ============================================
+   BIBLIOTECA - SE HUB
+============================================ */
+
+
+/* ============================================
+   BARRA PRINCIPAL
+============================================ */
+
+.library-toolbar {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* ============================================
+   PESQUISA
+============================================ */
+
+.library-search {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    max-width: 480px;
+
+    padding: 14px 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    transition: 0.2s;
+
+}
+
+
+.library-search:focus-within {
+
+    border-color: #2f855a;
+
+    box-shadow: 0 0 0 4px rgba(47, 133, 90, 0.08);
+
+}
+
+
+.library-search i {
+
+    color: #9ca3af;
+
+}
+
+
+.library-search input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    color: #1f2937;
+
+    background: transparent;
+
+}
+
+
+.library-search input::placeholder {
+
+    color: #9ca3af;
+
+}
+
+
+/* ============================================
+   AÇÕES
+============================================ */
+
+.library-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.library-action-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 13px 18px;
+
+    border-radius: 10px;
+
+    border: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    white-space: nowrap;
+
+}
+
+
+.library-action-button.secondary {
+
+    background: #ffffff;
+
+    color: #4b5563;
+
+    border: 1px solid #e5e7eb;
+
+}
+
+
+.library-action-button.secondary:hover {
+
+    background: #f9fafb;
+
+}
+
+
+.library-action-button.primary {
+
+    background: #2f855a;
+
+    color: #ffffff;
+
+}
+
+
+.library-action-button.primary:hover {
+
+    background: #276749;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* ============================================
+   INDICADORES
+============================================ */
+
+.library-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.library-stat-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #edf0f2;
+
+    border-radius: 14px;
+
+    transition: 0.2s;
+
+}
+
+
+.library-stat-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.06);
+
+}
+
+
+.library-stat-card span {
+
+    display: block;
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.library-stat-card h2 {
+
+    font-size: 24px;
+
+    color: #1f2937;
+
+}
+
+
+/* ÍCONES DOS INDICADORES */
+
+.library-stat-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+
+}
+
+
+.blue-stat {
+
+    color: #2563eb;
+
+    background:
+        rgba(37, 99, 235, 0.1);
+
+}
+
+
+.red-stat {
+
+    color: #dc2626;
+
+    background:
+        rgba(220, 38, 38, 0.1);
+
+}
+
+
+.green-stat {
+
+    color: #2f855a;
+
+    background:
+        rgba(47, 133, 90, 0.1);
+
+}
+
+
+.purple-stat {
+
+    color: #7c3aed;
+
+    background:
+        rgba(124, 58, 237, 0.1);
+
+}
+
+
+/* ============================================
+   LAYOUT PRINCIPAL
+============================================ */
+
+.library-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        260px
+        minmax(0, 1fr);
+
+    gap: 24px;
+
+    align-items: start;
+
+}
+
+
+/* ============================================
+   CATEGORIAS
+============================================ */
+
+.library-categories {
+
+    background: #ffffff;
+
+    border: 1px solid #edf0f2;
+
+    border-radius: 16px;
+
+    padding: 22px;
+
+}
+
+
+.library-section-title {
+
+    margin-bottom: 20px;
+
+}
+
+
+.library-section-title span {
+
+    display: block;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    color: #9ca3af;
+
+    margin-bottom: 4px;
+
+}
+
+
+.library-section-title h3 {
+
+    color: #1f2937;
+
+    font-size: 18px;
+
+}
+
+
+/* ============================================
+   LISTA DE CATEGORIAS
+============================================ */
+
+.category-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+}
+
+
+.category-button {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    border: none;
+
+    background: transparent;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    color: #6b7280;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    text-align: left;
+
+}
+
+
+.category-button i {
+
+    width: 20px;
+
+}
+
+
+.category-button span {
+
+    flex: 1;
+
+}
+
+
+.category-button strong {
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    color: #9ca3af;
+
+}
+
+
+.category-button:hover {
+
+    background: #f3f4f6;
+
+}
+
+
+.category-button.active {
+
+    background:
+        rgba(47, 133, 90, 0.1);
+
+    color: #2f855a;
+
+    font-weight: 600;
+
+}
+
+
+.category-button.active strong {
+
+    color: #2f855a;
+
+}
+
+
+/* ============================================
+   FAVORITOS
+============================================ */
+
+.favorites-box {
+
+    margin-top: 24px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid #edf0f2;
+
+}
+
+
+.favorites-box > div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #374151;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    margin-bottom: 12px;
+
+}
+
+
+.favorites-box > div i {
+
+    color: #f59e0b;
+
+}
+
+
+.favorites-box button {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 10px 0;
+
+    background: transparent;
+
+    border: none;
+
+    color: #2f855a;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+}
+
+
+/* ============================================
+   CONTEÚDO PRINCIPAL
+============================================ */
+
+.library-content {
+
+    min-width: 0;
+
+}
+
+
+.library-content-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 22px;
+
+}
+
+
+.library-content-header h2 {
+
+    color: #1f2937;
+
+    font-size: 22px;
+
+}
+
+
+/* ============================================
+   BOTÕES DE VISUALIZAÇÃO
+============================================ */
+
+.library-view-actions {
+
+    display: flex;
+
+    gap: 6px;
+
+}
+
+
+.view-button {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 9px;
+
+    color: #6b7280;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.view-button:hover {
+
+    background: #f3f4f6;
+
+}
+
+
+.view-button.active {
+
+    background: #2f855a;
+
+    border-color: #2f855a;
+
+    color: #ffffff;
+
+}
+
+
+/* ============================================
+   GRID DE DOCUMENTOS
+============================================ */
+
+.documents-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(240px, 1fr)
+        );
+
+    gap: 20px;
+
+}
+
+
+/* ============================================
+   CARD DO DOCUMENTO
+============================================ */
+
+.document-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 280px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #edf0f2;
+
+    border-radius: 16px;
+
+    transition: 0.25s;
+
+}
+
+
+.document-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(47, 133, 90, 0.3);
+
+    box-shadow:
+        0 14px 30px
+        rgba(0, 0, 0, 0.06);
+
+}
+
+
+/* ============================================
+   TOPO DO CARD
+============================================ */
+
+.document-card-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.document-type-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    font-size: 22px;
+
+}
+
+
+/* PDF */
+
+.pdf-file {
+
+    color: #dc2626;
+
+    background:
+        rgba(220, 38, 38, 0.1);
+
+}
+
+
+/* EXCEL */
+
+.excel-file {
+
+    color: #16a34a;
+
+    background:
+        rgba(22, 163, 74, 0.1);
+
+}
+
+
+/* WORD */
+
+.word-file {
+
+    color: #2563eb;
+
+    background:
+        rgba(37, 99, 235, 0.1);
+
+}
+
+
+/* POWERPOINT */
+
+.powerpoint-file {
+
+    color: #ea580c;
+
+    background:
+        rgba(234, 88, 12, 0.1);
+
+}
+
+
+/* ============================================
+   FAVORITO
+============================================ */
+
+.favorite-button {
+
+    width: 36px;
+
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    border-radius: 10px;
+
+    color: #9ca3af;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.favorite-button:hover {
+
+    background: #f9fafb;
+
+}
+
+
+.favorite-button.active {
+
+    color: #f59e0b;
+
+}
+
+
+/* ============================================
+   CORPO DO CARD
+============================================ */
+
+.document-card-body {
+
+    flex: 1;
+
+}
+
+
+.document-category {
+
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    padding: 5px 10px;
+
+    background:
+        rgba(47, 133, 90, 0.08);
+
+    color: #2f855a;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.document-card-body h3 {
+
+    color: #1f2937;
+
+    font-size: 15px;
+
+    line-height: 1.4;
+
+    margin-bottom: 10px;
+
+}
+
+
+.document-card-body p {
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+/* ============================================
+   RODAPÉ DO CARD
+============================================ */
+
+.document-card-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+    padding-top: 16px;
+
+    border-top:
+        1px solid #f0f1f2;
+
+}
+
+
+.document-card-footer div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.document-card-footer span {
+
+    color: #4b5563;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+}
+
+
+.document-card-footer small {
+
+    color: #9ca3af;
+
+    font-size: 11px;
+
+}
+
+
+.document-menu-button {
+
+    width: 34px;
+
+    height: 34px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #9ca3af;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.document-menu-button:hover {
+
+    background: #f3f4f6;
+
+    color: #4b5563;
+
+}
+
+
+/* ============================================
+   DOCUMENTO OCULTO
+============================================ */
+
+.document-card.hidden {
+
+    display: none;
+
+}
+
+
+/* ============================================
+   MENSAGEM VAZIA
+============================================ */
+
+.empty-library {
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+}
+
+
+.empty-library.show {
+
+    display: flex;
+
+}
+
+
+.empty-library-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(47, 133, 90, 0.08);
+
+    color: #2f855a;
+
+    font-size: 28px;
+
+}
+
+
+.empty-library h3 {
+
+    color: #1f2937;
+
+    margin-bottom: 8px;
+
+}
+
+
+.empty-library p {
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+}
+
+
+/* ============================================
+   MODO LISTA
+============================================ */
+
+.documents-grid.list-view {
+
+    grid-template-columns: 1fr;
+
+}
+
+
+.documents-grid.list-view .document-card {
+
+    min-height: auto;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.documents-grid.list-view
+.document-card-top {
+
+    margin-bottom: 0;
+
+}
+
+
+.documents-grid.list-view
+.favorite-button {
+
+    display: none;
+
+}
+
+
+.documents-grid.list-view
+.document-card-body {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.documents-grid.list-view
+.document-card-body p {
+
+    display: none;
+
+}
+
+
+.documents-grid.list-view
+.document-card-footer {
+
+    margin-top: 0;
+
+    padding-top: 0;
+
+    border-top: none;
+
+    min-width: 150px;
+
+}
+
+
+/* ============================================
+   RESPONSIVIDADE
+============================================ */
+
+@media (max-width: 1200px) {
+
+    .library-stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .library-layout {
+
+        grid-template-columns:
+            230px
+            minmax(0, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .library-toolbar {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .library-search {
+
+        max-width: none;
+
+    }
+
+
+    .library-actions {
+
+        justify-content: flex-end;
+
+    }
+
+
+    .library-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .library-categories {
+
+        width: 100%;
+
+    }
+
+
+    .category-list {
+
+        flex-direction: row;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .category-button {
+
+        width: auto;
+
+        flex: 1;
+
+        min-width: 180px;
+
+    }
+
+
+    .favorites-box {
+
+        display: none;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .library-stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .library-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .library-action-button {
+
+        width: 100%;
+
+    }
+
+
+    .library-content-header {
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .documents-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .category-list {
+
+        flex-direction: column;
+
+    }
+
+
+    .category-button {
+
+        width: 100%;
+
+    }
+
+
+    .documents-grid.list-view
+    .document-card {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .documents-grid.list-view
+    .document-card-body {
+
+        display: block;
+
+    }
+
+
+    .documents-grid.list-view
+    .document-card-footer {
+
+        margin-top: 16px;
+
+        padding-top: 16px;
+
+        border-top:
+            1px solid #f0f1f2;
+
+    }
+
+}
+
+/* ============================================
+   MODAL - NOVO DOCUMENTO
+============================================ */
+
+.library-document-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.25s;
+
+}
+
+
+.library-document-modal.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+.library-document-modal-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(15, 23, 42, 0.55);
+
+    backdrop-filter: blur(3px);
+
+}
+
+
+.library-document-modal-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 620px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, 0.18);
+
+    transform: translateY(20px) scale(0.98);
+
+    transition: 0.25s;
+
+}
+
+
+.library-document-modal.open
+.library-document-modal-content {
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+.library-document-modal-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.library-document-modal-header span {
+
+    display: block;
+
+    color: #2f855a;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.library-document-modal-header h2 {
+
+    color: #1f2937;
+
+    font-size: 24px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.library-document-modal-header p {
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+}
+
+
+.library-modal-close {
+
+    width: 38px;
+
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #f3f4f6;
+
+    color: #6b7280;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.library-modal-close:hover {
+
+    background: #e5e7eb;
+
+    color: #1f2937;
+
+}
+
+
+/* ============================================
+   FORMULÁRIO
+============================================ */
+
+.library-document-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+
+.library-form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.library-form-group label {
+
+    color: #374151;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+.library-form-group input,
+.library-form-group textarea,
+.library-form-group select {
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #1f2937;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+
+}
+
+
+.library-form-group textarea {
+
+    resize: vertical;
+
+}
+
+
+.library-form-group input:focus,
+.library-form-group textarea:focus,
+.library-form-group select:focus {
+
+    border-color: #2f855a;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(47, 133, 90, 0.08);
+
+}
+
+
+.library-form-row {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.library-form-group small {
+
+    color: #9ca3af;
+
+    font-size: 11px;
+
+}
+
+
+.library-document-form-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding-top: 10px;
+
+}
+
+
+.library-modal-cancel,
+.library-modal-submit {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    border: none;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.library-modal-cancel {
+
+    background: #f3f4f6;
+
+    color: #4b5563;
+
+}
+
+
+.library-modal-cancel:hover {
+
+    background: #e5e7eb;
+
+}
+
+
+.library-modal-submit {
+
+    background: #2f855a;
+
+    color: #ffffff;
+
+}
+
+
+.library-modal-submit:hover {
+
+    background: #276749;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* ============================================
+   MENU DOS DOCUMENTOS
+============================================ */
+
+.document-context-menu {
+
+    min-width: 210px;
+
+    padding: 6px;
+
+    background: #ffffff;
+
+    border: 1px solid #edf0f2;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.12);
+
+    z-index: 10000;
+
+}
+
+
+.document-context-menu button {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #4b5563;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+
+}
+
+
+.document-context-menu button:hover {
+
+    background: #f3f4f6;
+
+}
+
+
+.document-context-menu button i {
+
+    width: 16px;
+
+}
+
+
+.document-context-menu button.danger {
+
+    color: #dc2626;
+
+}
+
+
+.document-context-menu button.danger:hover {
+
+    background:
+        rgba(220, 38, 38, 0.08);
+
+}
+
+
+/* ============================================
+   RESPONSIVO DO MODAL
+============================================ */
+
+@media (max-width: 600px) {
+
+    .library-document-modal-content {
+
+        padding: 22px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .library-form-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .library-document-form-actions {
+
+        flex-direction: column-reverse;
+
+    }
+
+
+    .library-modal-cancel,
+    .library-modal-submit {
+
+        width: 100%;
+
+    }
+
+}
+
+/* ============================================
+   MODAL DA BIBLIOTECA
+============================================ */
+
+.library-modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(15, 23, 42, 0.55);
+
+    backdrop-filter: blur(4px);
+
+    z-index: 9999;
+
+}
+
+
+.library-modal-overlay.show {
+
+    display: flex;
+
+}
+
+
+/* ============================================
+   MODAL
+============================================ */
+
+.library-modal {
+
+    width: 100%;
+
+    max-width: 620px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, 0.18);
+
+    animation:
+        libraryModalIn
+        0.2s
+        ease;
+
+}
+
+
+@keyframes libraryModalIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px)
+            scale(0.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ============================================
+   CABEÇALHO
+============================================ */
+
+.library-modal-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 24px 26px;
+
+    border-bottom:
+        1px solid #edf0f2;
+
+}
+
+
+.library-modal-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.library-modal-title-icon {
+
+    width: 44px;
+
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        rgba(47, 133, 90, 0.1);
+
+    color: #2f855a;
+
+    font-size: 18px;
+
+}
+
+
+.library-modal-title h2 {
+
+    margin: 0;
+
+    color: #1f2937;
+
+    font-size: 19px;
+
+}
+
+
+.library-modal-title p {
+
+    margin-top: 3px;
+
+    color: #9ca3af;
+
+    font-size: 12px;
+
+}
+
+
+.library-modal-close {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    border-radius: 9px;
+
+    color: #9ca3af;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.library-modal-close:hover {
+
+    background: #f3f4f6;
+
+    color: #374151;
+
+}
+
+
+/* ============================================
+   CORPO
+============================================ */
+
+.library-modal-body {
+
+    padding: 26px;
+
+}
+
+
+/* ============================================
+   FORMULÁRIO
+============================================ */
+
+.library-form-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+.library-form-group:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.library-form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #374151;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+.library-form-group label span {
+
+    color: #dc2626;
+
+}
+
+
+.library-form-control {
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border:
+        1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #1f2937;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+
+    box-sizing: border-box;
+
+}
+
+
+.library-form-control:focus {
+
+    border-color: #2f855a;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(47, 133, 90, 0.08);
+
+}
+
+
+.library-form-control::placeholder {
+
+    color: #9ca3af;
+
+}
+
+
+textarea.library-form-control {
+
+    min-height: 110px;
+
+    resize: vertical;
+
+    line-height: 1.5;
+
+}
+
+
+/* ============================================
+   LINHA DUPLA
+============================================ */
+
+.library-form-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 16px;
+
+}
+
+
+/* ============================================
+   SELECT
+============================================ */
+
+select.library-form-control {
+
+    cursor: pointer;
+
+}
+
+
+/* ============================================
+   LINK
+============================================ */
+
+.library-link-input {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.library-link-input > i {
+
+    color: #9ca3af;
+
+    font-size: 14px;
+
+}
+
+
+/* ============================================
+   FAVORITO
+============================================ */
+
+.library-favorite-option {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 14px 16px;
+
+    background: #f9fafb;
+
+    border:
+        1px solid #edf0f2;
+
+    border-radius: 11px;
+
+}
+
+
+.library-favorite-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+}
+
+
+.library-favorite-info i {
+
+    color: #f59e0b;
+
+    font-size: 17px;
+
+}
+
+
+.library-favorite-info div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+}
+
+
+.library-favorite-info strong {
+
+    color: #374151;
+
+    font-size: 13px;
+
+}
+
+
+.library-favorite-info span {
+
+    color: #9ca3af;
+
+    font-size: 11px;
+
+}
+
+
+/* ============================================
+   SWITCH
+============================================ */
+
+.library-switch {
+
+    position: relative;
+
+    width: 44px;
+
+    height: 24px;
+
+}
+
+
+.library-switch input {
+
+    opacity: 0;
+
+    width: 0;
+
+    height: 0;
+
+}
+
+
+.library-switch-slider {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: #d1d5db;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.library-switch-slider::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+
+    height: 18px;
+
+    left: 3px;
+
+    top: 3px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 1px 3px
+        rgba(0, 0, 0, 0.2);
+
+    transition: 0.2s;
+
+}
+
+
+.library-switch input:checked
++ .library-switch-slider {
+
+    background: #2f855a;
+
+}
+
+
+.library-switch input:checked
++ .library-switch-slider::before {
+
+    transform:
+        translateX(20px);
+
+}
+
+
+/* ============================================
+   RODAPÉ DO MODAL
+============================================ */
+
+.library-modal-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding: 18px 26px;
+
+    border-top:
+        1px solid #edf0f2;
+
+    background: #fafafa;
+
+    border-radius:
+        0 0 18px 18px;
+
+}
+
+
+/* ============================================
+   BOTÕES
+============================================ */
+
+.library-modal-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    border-radius: 9px;
+
+    border: none;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.library-modal-button.cancel {
+
+    background: #ffffff;
+
+    color: #4b5563;
+
+    border:
+        1px solid #e5e7eb;
+
+}
+
+
+.library-modal-button.cancel:hover {
+
+    background: #f3f4f6;
+
+}
+
+
+.library-modal-button.save {
+
+    background: #2f855a;
+
+    color: #ffffff;
+
+}
+
+
+.library-modal-button.save:hover {
+
+    background: #276749;
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* ============================================
+   MENU DE AÇÕES
+============================================ */
+
+.library-document-menu {
+
+    position: fixed;
+
+    min-width: 170px;
+
+    padding: 6px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #edf0f2;
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.12);
+
+    z-index: 9998;
+
+    animation:
+        menuIn
+        0.15s
+        ease;
+
+}
+
+
+@keyframes menuIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-5px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+.library-document-menu button {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 11px;
+
+    border: none;
+
+    background: transparent;
+
+    border-radius: 7px;
+
+    color: #4b5563;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+
+}
+
+
+.library-document-menu button:hover {
+
+    background: #f3f4f6;
+
+    color: #1f2937;
+
+}
+
+
+.library-document-menu button i {
+
+    width: 17px;
+
+    text-align: center;
+
+}
+
+
+.library-document-menu button.danger {
+
+    color: #dc2626;
+
+}
+
+
+.library-document-menu button.danger:hover {
+
+    background:
+        rgba(220, 38, 38, 0.08);
+
+}
+
+
+/* ============================================
+   NOTIFICAÇÃO / TOAST
+============================================ */
+
+.library-toast {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    min-width: 260px;
+
+    max-width: 380px;
+
+    padding: 14px 17px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #edf0f2;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.12);
+
+    z-index: 10000;
+
+    animation:
+        toastIn
+        0.25s
+        ease;
+
+}
+
+
+.library-toast i {
+
+    color: #2f855a;
+
+    font-size: 17px;
+
+}
+
+
+.library-toast span {
+
+    color: #374151;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+}
+
+
+@keyframes toastIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ============================================
+   RESPONSIVIDADE DO MODAL
+============================================ */
+
+@media (max-width: 600px) {
+
+    .library-modal {
+
+        max-height: 95vh;
+
+        border-radius: 15px;
+
+    }
+
+
+    .library-modal-header {
+
+        padding: 20px;
+
+    }
+
+
+    .library-modal-body {
+
+        padding: 20px;
+
+    }
+
+
+    .library-modal-footer {
+
+        padding: 15px 20px;
+
+        flex-direction: column-reverse;
+
+    }
+
+
+    .library-modal-button {
+
+        width: 100%;
+
+    }
+
+
+    .library-form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+
+    .library-toast {
+
+        left: 15px;
+
+        right: 15px;
+
+        bottom: 15px;
+
+        min-width: 0;
+
+    }
+
+}
+
+/* ============================================
+   MODAL DA BIBLIOTECA
+============================================ */
+
+.library-modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(15, 23, 42, 0.45);
+
+    backdrop-filter: blur(4px);
+
+    z-index: 9999;
+
+}
+
+
+.library-modal {
+
+    width: 100%;
+
+    max-width: 560px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 25px 60px
+        rgba(0, 0, 0, 0.18);
+
+}
+
+
+.library-modal-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 24px;
+
+    border-bottom:
+        1px solid #edf0f2;
+
+}
+
+
+.library-modal-header h2 {
+
+    margin-top: 4px;
+
+    color: #1f2937;
+
+    font-size: 21px;
+
+}
+
+
+.library-modal-close {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    background: #f3f4f6;
+
+    color: #6b7280;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.library-modal-close:hover {
+
+    background: #e5e7eb;
+
+    color: #1f2937;
+
+}
+
+
+.library-modal-body {
+
+    padding: 24px;
+
+}
+
+
+/* ============================================
+   FORMULÁRIO
+============================================ */
+
+.library-form-group {
+
+    margin-bottom: 18px;
+
+}
+
+
+.library-form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #374151;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+}
+
+
+.library-form-group input,
+.library-form-group select,
+.library-form-group textarea {
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #1f2937;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+
+}
+
+
+.library-form-group textarea {
+
+    resize: vertical;
+
+}
+
+
+.library-form-group input:focus,
+.library-form-group select:focus,
+.library-form-group textarea:focus {
+
+    border-color: #2f855a;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(47, 133, 90, 0.08);
+
+}
+
+
+.library-form-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 24px;
+
+}
+
+
+.modal-cancel-button,
+.modal-confirm-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 11px 18px;
+
+    border-radius: 9px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.modal-cancel-button {
+
+    border: 1px solid #e5e7eb;
+
+    background: #ffffff;
+
+    color: #6b7280;
+
+}
+
+
+.modal-cancel-button:hover {
+
+    background: #f3f4f6;
+
+}
+
+
+.modal-confirm-button {
+
+    border: none;
+
+    background: #2f855a;
+
+    color: #ffffff;
+
+}
+
+
+.modal-confirm-button:hover {
+
+    background: #276749;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* ============================================
+   INFORMAÇÕES
+============================================ */
+
+.library-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+
+.library-info > div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    padding: 14px;
+
+    background: #f9fafb;
+
+    border-radius: 10px;
+
+}
+
+
+.library-info span {
+
+    color: #9ca3af;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.library-info strong {
+
+    color: #1f2937;
+
+    font-size: 14px;
+
+}
+
+
+/* ============================================
+   MENU DOS DOCUMENTOS
+============================================ */
+
+.library-document-menu {
+
+    min-width: 210px;
+
+    padding: 6px;
+
+    background: #ffffff;
+
+    border: 1px solid #edf0f2;
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.12);
+
+    z-index: 10000;
+
+}
+
+
+.library-document-menu button {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 12px;
+
+    border: none;
+
+    background: transparent;
+
+    border-radius: 7px;
+
+    color: #4b5563;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+
+.library-document-menu button:hover {
+
+    background: #f3f4f6;
+
+    color: #1f2937;
+
+}
+
+
+.library-document-menu button i {
+
+    width: 18px;
+
+    color: #2f855a;
+
+}
+
+
+/* ============================================
+   TOAST
+============================================ */
+
+.library-toast {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    max-width: 360px;
+
+    padding: 14px 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #edf0f2;
+
+    border-radius: 11px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.12);
+
+    color: #374151;
+
+    font-size: 13px;
+
+    z-index: 11000;
+
+    animation:
+        libraryToastIn
+        0.25s
+        ease;
+
+}
+
+
+.library-toast i {
+
+    font-size: 17px;
+
+}
+
+
+.library-toast.success i {
+
+    color: #2f855a;
+
+}
+
+
+.library-toast.warning i {
+
+    color: #f59e0b;
+
+}
+
+
+.library-toast.info i {
+
+    color: #2563eb;
+
+}
+
+
+.library-toast.hide {
+
+    opacity: 0;
+
+    transform:
+        translateY(10px);
+
+    transition: 0.3s;
+
+}
+
+
+@keyframes libraryToastIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(10px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ============================================
+   RESPONSIVO DO MODAL
+============================================ */
+
+@media (max-width: 600px) {
+
+    .library-modal-overlay {
+
+        padding: 10px;
+
+    }
+
+
+    .library-modal {
+
+        max-height: 95vh;
+
+        border-radius: 14px;
+
+    }
+
+
+    .library-modal-header {
+
+        padding: 18px;
+
+    }
+
+
+    .library-modal-body {
+
+        padding: 18px;
+
+    }
+
+
+    .library-form-actions {
+
+        flex-direction: column;
+
+    }
+
+
+    .modal-cancel-button,
+    .modal-confirm-button {
+
+        width: 100%;
+
+    }
+
+
+    .library-toast {
+
+        right: 15px;
+
+        bottom: 15px;
+
+        left: 15px;
+
+        max-width: none;
+
+    }
+
+}
+
+/* ============================================
+   ESTADO DE CARREGAMENTO
+============================================ */
+
+.library-loading {
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 70px 20px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+}
+
+
+.library-loading.show {
+
+    display: flex;
+
+}
+
+
+.library-loading i {
+
+    color: #2f855a;
+
+    font-size: 22px;
+
+}
+
+
+/* ============================================
+   ESTADO DE ERRO
+============================================ */
+
+.library-error {
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+}
+
+
+.library-error.show {
+
+    display: flex;
+
+}
+
+
+.library-error h3 {
+
+    color: #1f2937;
+
+    margin-bottom: 8px;
+
+}
+
+
+.library-error p {
+
+    max-width: 420px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ============================================
+   MODAL
+============================================ */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+
+}
+
+
+.modal.show {
+
+    display: flex;
+
+}
+
+
+/* ============================================
+   FUNDO DO MODAL
+============================================ */
+
+.modal-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        rgba(15, 23, 42, 0.55);
+
+    backdrop-filter:
+
+        blur(3px);
+
+}
+
+
+/* ============================================
+   CONTEÚDO DO MODAL
+============================================ */
+
+.modal-content {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow:
+
+        0 25px 60px
+        rgba(0, 0, 0, 0.2);
+
+    z-index: 1;
+
+    animation:
+
+        modalAppear
+        0.25s
+        ease;
+
+}
+
+
+/* ============================================
+   ANIMAÇÃO DO MODAL
+============================================ */
+
+@keyframes modalAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+
+            translateY(15px)
+            scale(0.98);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform:
+
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ============================================
+   CABEÇALHO DO MODAL
+============================================ */
+
+.modal-header {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 24px 26px 20px;
+
+    border-bottom:
+
+        1px solid #edf0f2;
+
+}
+
+
+.modal-header h2 {
+
+    color: #1f2937;
+
+    font-size: 20px;
+
+    margin-top: 4px;
+
+}
+
+
+/* ============================================
+   BOTÃO FECHAR
+============================================ */
+
+.modal-close {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #f3f4f6;
+
+    color: #6b7280;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.modal-close:hover {
+
+    background: #e5e7eb;
+
+    color: #1f2937;
+
+}
+
+
+/* ============================================
+   FORMULÁRIO DO MODAL
+============================================ */
+
+#uploadDocumentForm {
+
+    padding: 26px;
+
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.form-group label {
+
+    color: #374151;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+/* ============================================
+   INPUTS
+============================================ */
+
+.form-group input,
+
+.form-group textarea,
+
+.form-group select {
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border:
+
+        1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #1f2937;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 100px;
+
+}
+
+
+.form-group input:focus,
+
+.form-group textarea:focus,
+
+.form-group select:focus {
+
+    border-color: #2f855a;
+
+    box-shadow:
+
+        0 0 0 4px
+        rgba(47, 133, 90, 0.08);
+
+}
+
+
+/* ============================================
+   INPUT DE ARQUIVO
+============================================ */
+
+.form-group input[type="file"] {
+
+    padding: 10px;
+
+    cursor: pointer;
+
+}
+
+
+.form-group input[type="file"]::file-selector-button {
+
+    margin-right: 12px;
+
+    padding: 8px 12px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background:
+
+        rgba(47, 133, 90, 0.1);
+
+    color: #2f855a;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+/* ============================================
+   AÇÕES DO MODAL
+============================================ */
+
+.modal-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 28px;
+
+    padding-top: 20px;
+
+    border-top:
+
+        1px solid #edf0f2;
+
+}
+
+
+/* ============================================
+   ESTADO DE ENVIO
+============================================ */
+
+.library-action-button:disabled {
+
+    opacity: 0.65;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+}
+
+
+/* ============================================
+   SCROLL DO MODAL
+============================================ */
+
+.modal-content::-webkit-scrollbar {
+
+    width: 7px;
+
+}
+
+
+.modal-content::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+
+
+.modal-content::-webkit-scrollbar-thumb {
+
+    background: #d1d5db;
+
+    border-radius: 10px;
+
+}
+
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+
+    background: #9ca3af;
+
+}
+
+
+/* ============================================
+   RESPONSIVIDADE DO MODAL
+============================================ */
+
+@media (max-width: 600px) {
+
+    .modal {
+
+        padding: 12px;
+
+        align-items: flex-end;
+
+    }
+
+
+    .modal-content {
+
+        max-height: 92vh;
+
+        border-radius:
+
+            18px
+            18px
+            12px
+            12px;
+
+    }
+
+
+    .modal-header {
+
+        padding:
+
+            20px
+            20px
+            18px;
+
+    }
+
+
+    #uploadDocumentForm {
+
+        padding: 20px;
+
+    }
+
+
+    .modal-actions {
+
+        flex-direction: column-reverse;
+
+    }
+
+
+    .modal-actions .library-action-button {
+
+        width: 100%;
+
+    }
+
+}
